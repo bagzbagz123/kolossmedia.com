@@ -1610,11 +1610,19 @@ img#gform_ajax_spinner_1 {
 
 	/* Ensure free course section is visible on mobile */
 	section.elementor-element-96c48a3 {
-
+		display: block !important;
+	}
+	
 	section.elementor-element-96c48a3 .elementor-column {
 		width: 100% !important;
 	}
+	
+	/* Ensure product listings are visible */
+	.elementor-element-532d94c,
+	.elementor-element-532d94c .woocommerce {
 		display: block !important;
+		visibility: visible !important;
+		opacity: 1 !important;
 	}
 	
 	.gform_wrapper.tc_wrapper legend.gfield_label {
