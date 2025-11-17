@@ -1,0 +1,41 @@
+.elementor-5491 .elementor-element.elementor-element-3d647bee > .elementor-container{max-width:800px;}.elementor-5491 .elementor-element.elementor-element-3d647bee{overflow:hidden;transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;padding:60px 0px 60px 0px;}.elementor-5491 .elementor-element.elementor-element-3d647bee:not(.elementor-motion-effects-element-type-background), .elementor-5491 .elementor-element.elementor-element-3d647bee > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#0B0B0B;}.elementor-5491 .elementor-element.elementor-element-3d647bee > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-5491 .elementor-element.elementor-element-4094ad63 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute){margin-bottom:10px;}.elementor-5491 .elementor-element.elementor-element-677e445{text-align:center;}.elementor-5491 .elementor-element.elementor-element-677e445 .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-size:var( --e-global-typography-primary-font-size );font-weight:var( --e-global-typography-primary-font-weight );line-height:var( --e-global-typography-primary-line-height );letter-spacing:var( --e-global-typography-primary-letter-spacing );}.elementor-5491 .elementor-element.elementor-element-514c82f{--divider-border-style:solid;--divider-color:var( --e-global-color-accent );--divider-border-width:2.5px;}.elementor-5491 .elementor-element.elementor-element-514c82f .elementor-divider-separator{width:260px;margin:0 auto;margin-center:0;}.elementor-5491 .elementor-element.elementor-element-514c82f .elementor-divider{text-align:center;padding-block-start:2px;padding-block-end:2px;}.elementor-5491 .elementor-element.elementor-element-cb20293{--grid-columns:1;--grid-row-gap:25px;}@media(max-width:1024px){.elementor-5491 .elementor-element.elementor-element-677e445 .elementor-heading-title{font-size:var( --e-global-typography-primary-font-size );line-height:var( --e-global-typography-primary-line-height );letter-spacing:var( --e-global-typography-primary-letter-spacing );}.elementor-5491 .elementor-element.elementor-element-cb20293{--grid-columns:1;}}@media(max-width:767px){.elementor-5491 .elementor-element.elementor-element-3d647bee{padding:40px 0px 40px 0px;}.elementor-5491 .elementor-element.elementor-element-677e445 .elementor-heading-title{font-size:var( --e-global-typography-primary-font-size );line-height:var( --e-global-typography-primary-line-height );letter-spacing:var( --e-global-typography-primary-letter-spacing );}.elementor-5491 .elementor-element.elementor-element-cb20293{--grid-columns:1;}}/* Start custom CSS for heading, class: .elementor-element-677e445 */.elementor-5491 .elementor-element.elementor-element-677e445 .elementor-heading-title a {
+    font-weight: 700;
+}/* End custom CSS */
+/* Start custom CSS for section, class: .elementor-element-3d647bee *//*.elementor-5491 .elementor-element.elementor-element-3d647bee .elementor-widget-image {*/
+/*    min-height: 650px;*/
+/*}*/
+
+
+/*.elementor-5491 .elementor-element.elementor-element-3d647bee .elementor-widget-image .elementor-widget-container {*/
+/*    min-height: 650px;*/
+/*}*/
+
+/*.elementor-5491 .elementor-element.elementor-element-3d647bee .elementor-widget-image .elementor-widget-container figure {*/
+/*    min-height: 650px;*/
+/*}*/
+
+/*.elementor-5491 .elementor-element.elementor-element-3d647bee .elementor-widget-image .elementor-widget-container figure img {*/
+/*    min-height: 650px;*/
+/*    object-fit: cover;*/
+/*}*/
+
+.elementor-5491 .elementor-element.elementor-element-3d647bee figure.wp-caption {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: baseline;
+    gap: 10px;
+}
+
+
+.accountOut_slider .swiper-slide{
+    width: 320px;
+    border-radius: 1;
+}
+
+.accountOut_slider .swiper-slide img {
+    border-radius: 5px;
+}
+
+.accountOut_slider {
+    overflow: visible !important;
+}/* End custom CSS */

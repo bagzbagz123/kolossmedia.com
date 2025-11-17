@@ -1,0 +1,11 @@
+input.hasDatepicker{
+	background:url("https://gwuagency.com/wp-content/plugins/woo-checkout-regsiter-field-editor/assets/css/clndr-icon.png") no-repeat right center, #f2f2f2;
+	background-size: 7%;
+}
+
+
+.woocommerce form .form-row .select2-container,
+.woocommerce form .form-row .select2-container .select2-search__field
+{
+	width:100% !important;
+}
