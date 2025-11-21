@@ -781,6 +781,38 @@ button.elementskit-menu-hamburger.elementskit-menu-toggler {
 .tc_offcan_active{
 	overflow: hidden;
 }
+
+/* Fix Services mega menu positioning on all pages */
+.elementskit-megamenu-panel {
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	z-index: 9999 !important;
+}
+
+.elementskit-dropdown-menu-full_width .elementskit-megamenu-panel {
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100vw !important;
+	margin-left: calc(-50vw + 50%) !important;
+}
+
+/* Fix Services mega menu background - match home page styling */
+.elementor-element-e58b781.mega-menu,
+.elementor-1087 .elementor-element.elementor-element-e58b781 {
+	background-color: #212121 !important;
+	padding: 50px 0px 40px 0px !important;
+	margin-top: 10px !important;
+	margin-bottom: 0px !important;
+}
+
+.elementskit-megamenu-panel .elementor-element-e58b781,
+.elementskit-megamenu-panel .mega-menu {
+	background-color: #212121 !important;
+}
+
 /* end */
 
 /* serach page */
@@ -1848,10 +1880,10 @@ select, .woocommerce-product-categories select {
 				</div>
 				<div class="elementor-element elementor-element-0d6af99 elementor-widget elementor-widget-icon-box" data-id="0d6af99" data-element_type="widget" data-widget_type="icon-box.default">
 				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="../wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">		<div class="elementor-icon-box-wrapper">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">		<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/bundle-packages/index.html" >
+					<a href="/services/bundle-packages/index.html" >
 						Bundle Packages 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1866,7 +1898,7 @@ Structure for Success					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/personal-brand-company-page-automation/index.html" >
+					<a href="/services/personal-brand-company-page-automation/index.html" >
 						CRO Packages 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1893,7 +1925,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/popular-packages/index.html" >
+					<a href="/services/popular-packages/index.html" >
 						Popular					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1907,7 +1939,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/monthly-packages/index.html" >
+					<a href="/services/monthly-packages/index.html" >
 						Monthly Elite					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1933,7 +1965,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
+					<a href="/service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
 						Targeted Mass DM					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1947,7 +1979,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/advertising-packages/index.html" >
+					<a href="/services/advertising-packages/index.html" >
 						Digital Ads					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1962,7 +1994,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ig-account-outreach-2/index.html" >
+					<a href="/services/ig-account-outreach-2/index.html" >
 						IG Account Outreach 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1976,7 +2008,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/cold-email-outreach/index.html" >
+					<a href="/services/cold-email-outreach/index.html" >
 						Cold Email Outreach 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1990,7 +2022,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/email-sms-marketing/index.html" >
+					<a href="/services/email-sms-marketing/index.html" >
 						 EMAIL & SMS MARKETING					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2004,7 +2036,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/seo-services/index.html" >
+					<a href="/services/seo-services/index.html" >
 						FULL SCOPE SEO SERVICES					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2018,7 +2050,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/content-distribution/index.html" >
+					<a href="/service/content-distribution/index.html" >
 						Content Distribution 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2037,99 +2069,99 @@ For Personal Brands & Companies					</p>
 				</div>
 				<div class="elementor-element elementor-element-5929ce7 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5929ce7" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="../wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#tiktok">
+											<a href="/social-growth/index.html#tiktok">
 
 											<span class="elementor-icon-list-text">Tiktok</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#linkedin">
+											<a href="/social-growth/index.html#linkedin">
 
 											<span class="elementor-icon-list-text">LinkedIn </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitter">
+											<a href="/social-growth/index.html#twitter">
 
 											<span class="elementor-icon-list-text">Twitter</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#instagram">
+											<a href="/social-growth/index.html#instagram">
 
 											<span class="elementor-icon-list-text">Instagram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#facebook">
+											<a href="/social-growth/index.html#facebook">
 
 											<span class="elementor-icon-list-text">Facebook </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#youtube">
+											<a href="/social-growth/index.html#youtube">
 
 											<span class="elementor-icon-list-text">YouTube </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#discord">
+											<a href="/social-growth/index.html#discord">
 
 											<span class="elementor-icon-list-text">Discord</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#spotify">
+											<a href="/social-growth/index.html#spotify">
 
 											<span class="elementor-icon-list-text">Spotify</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#telegram">
+											<a href="/social-growth/index.html#telegram">
 
 											<span class="elementor-icon-list-text">Telegram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#reddit">
+											<a href="/social-growth/index.html#reddit">
 
 											<span class="elementor-icon-list-text">Reddit</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#clubhouse">
+											<a href="/social-growth/index.html#clubhouse">
 
 											<span class="elementor-icon-list-text">Club House</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#threads">
+											<a href="/social-growth/index.html#threads">
 
 											<span class="elementor-icon-list-text">Threads</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitch">
+											<a href="/social-growth/index.html#twitch">
 
 											<span class="elementor-icon-list-text">Twitch</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#truthsocial">
+											<a href="/social-growth/index.html#truthsocial">
 
 											<span class="elementor-icon-list-text">Truth Social</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#pinterest">
+											<a href="/social-growth/index.html#pinterest">
 
 											<span class="elementor-icon-list-text">Pinterest</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#quora">
+											<a href="/social-growth/index.html#quora">
 
 											<span class="elementor-icon-list-text">Quora</span>
 											</a>
@@ -2150,7 +2182,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../web-development/index.html" >
+					<a href="/web-development/index.html" >
 						Web/App development					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2164,7 +2196,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/community-dfy-buildout/index.html" >
+					<a href="/services/community-dfy-buildout/index.html" >
 						Community DFY Buildout					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2178,7 +2210,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/content-packages/index.html" >
+					<a href="/services/content-packages/index.html" >
 						Content Creation					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2192,7 +2224,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/design-packages/index.html" >
+					<a href="/services/design-packages/index.html" >
 						Graphic Design					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2206,7 +2238,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/targeted-data-scraping/index.html" >
+					<a href="/service/targeted-data-scraping/index.html" >
 						Targeted Data Scraping 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2220,7 +2252,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ai-services/index.html" >
+					<a href="/services/ai-services/index.html" >
 						AI SERVICES					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2234,7 +2266,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/consulting/index.html" >
+					<a href="/services/consulting/index.html" >
 						Consulting 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2248,7 +2280,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/dfy-podcast-launch/index.html" >
+					<a href="/service/dfy-podcast-launch/index.html" >
 						DFY Podcast Launch					</a>
 				</h3>
 							</div>
@@ -2260,7 +2292,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/dfy-white-label-agency/index.html" >
+					<a href="/services/dfy-white-label-agency/index.html" >
 						DFY White Label Agency					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2357,7 +2389,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/bundle-packages/index.html" >
+					<a href="/services/bundle-packages/index.html" >
 						Bundle Packages 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2372,7 +2404,7 @@ Structure for Success					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/personal-brand-company-page-automation/index.html" >
+					<a href="/services/personal-brand-company-page-automation/index.html" >
 						CRO Packages 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2398,7 +2430,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/popular-packages/index.html" >
+					<a href="/services/popular-packages/index.html" >
 						Popular					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2412,7 +2444,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/monthly-packages/index.html" >
+					<a href="/services/monthly-packages/index.html" >
 						Monthly Elite					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2438,7 +2470,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
+					<a href="/service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
 						Targeted Mass DM					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2452,7 +2484,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/advertising-packages/index.html" >
+					<a href="/services/advertising-packages/index.html" >
 						Digital Ads					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2467,7 +2499,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ig-account-outreach-2/index.html" >
+					<a href="/services/ig-account-outreach-2/index.html" >
 						IG Account Outreach 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2481,7 +2513,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/cold-email-outreach/index.html" >
+					<a href="/services/cold-email-outreach/index.html" >
 						Cold Email Outreach 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2495,7 +2527,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/email-sms-marketing/index.html" >
+					<a href="/services/email-sms-marketing/index.html" >
 						 EMAIL & SMS MARKETING					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2509,7 +2541,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/seo-services/index.html" >
+					<a href="/services/seo-services/index.html" >
 						FULL SCOPE SEO SERVICES					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2523,7 +2555,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/content-distribution/index.html" >
+					<a href="/service/content-distribution/index.html" >
 						Content Distribution 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2544,97 +2576,97 @@ For Personal Brands & Companies					</p>
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#tiktok">
+											<a href="/social-growth/index.html#tiktok">
 
 											<span class="elementor-icon-list-text">Tiktok</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#linkedin">
+											<a href="/social-growth/index.html#linkedin">
 
 											<span class="elementor-icon-list-text">LinkedIn </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitter">
+											<a href="/social-growth/index.html#twitter">
 
 											<span class="elementor-icon-list-text">Twitter</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#instagram">
+											<a href="/social-growth/index.html#instagram">
 
 											<span class="elementor-icon-list-text">Instagram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#facebook">
+											<a href="/social-growth/index.html#facebook">
 
 											<span class="elementor-icon-list-text">Facebook </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#youtube">
+											<a href="/social-growth/index.html#youtube">
 
 											<span class="elementor-icon-list-text">YouTube </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#discord">
+											<a href="/social-growth/index.html#discord">
 
 											<span class="elementor-icon-list-text">Discord</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#spotify">
+											<a href="/social-growth/index.html#spotify">
 
 											<span class="elementor-icon-list-text">Spotify</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#telegram">
+											<a href="/social-growth/index.html#telegram">
 
 											<span class="elementor-icon-list-text">Telegram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#reddit">
+											<a href="/social-growth/index.html#reddit">
 
 											<span class="elementor-icon-list-text">Reddit</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#clubhouse">
+											<a href="/social-growth/index.html#clubhouse">
 
 											<span class="elementor-icon-list-text">Club House</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#threads">
+											<a href="/social-growth/index.html#threads">
 
 											<span class="elementor-icon-list-text">Threads</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitch">
+											<a href="/social-growth/index.html#twitch">
 
 											<span class="elementor-icon-list-text">Twitch</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#truthsocial">
+											<a href="/social-growth/index.html#truthsocial">
 
 											<span class="elementor-icon-list-text">Truth Social</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#pinterest">
+											<a href="/social-growth/index.html#pinterest">
 
 											<span class="elementor-icon-list-text">Pinterest</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#quora">
+											<a href="/social-growth/index.html#quora">
 
 											<span class="elementor-icon-list-text">Quora</span>
 											</a>
@@ -2655,7 +2687,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../web-development/index.html" >
+					<a href="/web-development/index.html" >
 						Web/App development					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2669,7 +2701,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/community-dfy-buildout/index.html" >
+					<a href="/services/community-dfy-buildout/index.html" >
 						Community DFY Buildout					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2683,7 +2715,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/content-packages/index.html" >
+					<a href="/services/content-packages/index.html" >
 						Content Creation					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2697,7 +2729,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/design-packages/index.html" >
+					<a href="/services/design-packages/index.html" >
 						Graphic Design					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2711,7 +2743,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/targeted-data-scraping/index.html" >
+					<a href="/service/targeted-data-scraping/index.html" >
 						Targeted Data Scraping 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2725,7 +2757,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ai-services/index.html" >
+					<a href="/services/ai-services/index.html" >
 						AI SERVICES					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2739,7 +2771,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/consulting/index.html" >
+					<a href="/services/consulting/index.html" >
 						Consulting 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2753,7 +2785,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/dfy-podcast-launch/index.html" >
+					<a href="/service/dfy-podcast-launch/index.html" >
 						DFY Podcast Launch					</a>
 				</h3>
 							</div>
@@ -2765,7 +2797,7 @@ For Personal Brands & Companies					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/dfy-white-label-agency/index.html" >
+					<a href="/services/dfy-white-label-agency/index.html" >
 						DFY White Label Agency					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2833,124 +2865,124 @@ For Personal Brands & Companies					</p>
 <div class="woocommerce columns-3 "><ul class="products elementor-grid columns-3">
 <li class="product type-product post-421 status-publish first instock product_cat-popular-packages shipping-taxable purchasable product-type-simple">
    <a href="../service/high-status/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">High Status</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>24,997</bdi></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>24,998</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>250k real followers ($25,000 value)</li>
+ 	<li>250k real followers ($12,800 value)</li>
  	<li>Published in 12 Articles</li>
- 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 3 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($3,396 Value)</li>
- 	<li>21 Pieces of Graphic Design Content or Reel Video Editing ($945 value)</li>
+ 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 3 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($1,739 Value)</li>
+ 	<li>21 Pieces of Graphic Design Content or Reel Video Editing ($482 value)</li>
  	<li>Monthly engagement (7,500+ likes, 90,000+ views, 120+ comments per post)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($615/mo)(Value: $3,400)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($313/mo)(Value: $1,741)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=421.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="421" data-product_sku="" aria-label="Add &ldquo;High Status&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="High Status" data-price="24997">Add to cart</a></div></li><li class="product type-product post-448 status-publish instock product_cat-popular-packages featured virtual purchasable product-type-simple">
    <a href="../service/top-tier/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Top Tier</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>9,997</bdi></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>9,998</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>100k real followers ($10,000 value)</li>
- 	<li>Published in 8 Articles (Medium, Disrupt, Digital Journal, NY Weekly, LA Wire, US Reporter, Ritz Herald, and Yahoo Finance) ($3,280 value)</li>
- 	<li>31 Days of Targeted Account Outreach Service ($849 value)</li>
- 	<li>9 Pieces of Graphic Design Content or Reel Video Editing ($405 value)</li>
+ 	<li>100k real followers ($5,120 value)</li>
+ 	<li>Published in 8 Articles (Medium, Disrupt, Digital Journal, NY Weekly, LA Wire, US Reporter, Ritz Herald, and Yahoo Finance) ($1,679 value)</li>
+ 	<li>31 Days of Targeted Account Outreach Service ($433 value)</li>
+ 	<li>9 Pieces of Graphic Design Content or Reel Video Editing ($206 value)</li>
  	<li>Monthly engagement (3,000+ likes, 50,000+ Views, 90+ comments per post)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($449/mo)(Value: $2,750)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($228/mo)(Value: $1,408)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=448.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="448" data-product_sku="" aria-label="Add &ldquo;Top Tier&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Top Tier" data-price="9997">Add to cart</a></div></li><li class="product type-product post-620 status-publish last instock product_cat-popular-packages virtual purchasable product-type-simple">
    <a href="../service/elite/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Elite</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>7,497</bdi></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>7,498</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>75k real followers ($7,500 value)</li>
- 	<li>Published in 7 Articles (Medium, Disrupt, Digital Journal, NY Weekly, LA Wire, US Reporter, and Ritz Herald) ($2,480 value)</li>
- 	<li>31 Days of Targeted Account Outreach Service ($849 value)</li>
- 	<li>7 Pieces of Graphic Design Content or Reel Video Editing ($315 value)</li>
+ 	<li>75k real followers ($3,840 value)</li>
+ 	<li>Published in 7 Articles (Medium, Disrupt, Digital Journal, NY Weekly, LA Wire, US Reporter, and Ritz Herald) ($1,270 value)</li>
+ 	<li>31 Days of Targeted Account Outreach Service ($433 value)</li>
+ 	<li>7 Pieces of Graphic Design Content or Reel Video Editing ($160 value)</li>
  	<li>Monthly engagement (2,500+ likes, 45,000+ views, 80+ comments per post)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($349/mo) (Value: $2,165)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($177/mo) (Value: $1,109)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=620.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="620" data-product_sku="" aria-label="Add &ldquo;Elite&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Elite" data-price="7497">Add to cart</a></div></li><li class="product type-product post-621 status-publish first instock product_cat-popular-packages virtual purchasable product-type-simple">
    <a href="../service/royalty/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Royalty</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>99,997</bdi></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>99,998</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>1M+ real followers ($100,000 value)</li>
+ 	<li>1M+ real followers ($51,200 value)</li>
  	<li>Published in 20 Articles</li>
  	<li>Google Knowledge Panel (or additional press)</li>
- 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 13 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($11,886 Value)</li>
- 	<li>100 Pieces of Graphic Design Content or Reel Video Editing ($4,500 value)</li>
+ 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 13 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($6,086 Value)</li>
+ 	<li>100 Pieces of Graphic Design Content or Reel Video Editing ($2,304 value)</li>
  	<li>Monthly engagement (35,000+ likes, 750,000+ views, 500+ comments per post)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed in this package, growth, and access to our private community group. ($2.2k/mo)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed in this package, growth, and access to our private community group. ($0.2k/mo)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=621.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="621" data-product_sku="" aria-label="Add &ldquo;Royalty&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Royalty" data-price="99997">Add to cart</a></div></li><li class="product type-product post-622 status-publish instock product_cat-popular-packages virtual purchasable product-type-simple">
    <a href="../service/legendary/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Legendary</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>49,997</bdi></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>49,998</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>550k real followers ($55,000 value)</li>
+ 	<li>550k real followers ($28,160 value)</li>
  	<li>Published in 15 Articles</li>
  	<li>Google Knowledge Panel (or additional press)</li>
- 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 6 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($5,943 Value)</li>
- 	<li>40 Pieces of Graphic Design Content or Reel Video Editing ($1,800 value)</li>
+ 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 6 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($3,042 Value)</li>
+ 	<li>40 Pieces of Graphic Design Content or Reel Video Editing ($920 value)</li>
  	<li>Monthly engagement (15,000+ likes, 250,000+ views, 200+ comments per post)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($1.4k/mo)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($0.4k/mo)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=622.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="622" data-product_sku="" aria-label="Add &ldquo;Legendary&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Legendary" data-price="49997">Add to cart</a></div></li><li class="product type-product post-626 status-publish last instock product_cat-popular-packages virtual purchasable product-type-simple">
    <a href="../service/professional/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Professional</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>5,500</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>50k real followers ($5,000 value)</li>
- 	<li>Published in 5 Articles (Medium, Disrupt, Digital Journal, NY Weekly, LA Wire) ($1,705 value)</li>
- 	<li>31 Days of Targeted Account Outreach Service ($849 value)</li>
- 	<li>5 Pieces of Graphic Design Content or Reel Video Editing ($225 value)</li>
+ 	<li>50k real followers ($2,560 value)</li>
+ 	<li>Published in 5 Articles (Medium, Disrupt, Digital Journal, NY Weekly, LA Wire) ($871 value)</li>
+ 	<li>31 Days of Targeted Account Outreach Service ($433 value)</li>
+ 	<li>5 Pieces of Graphic Design Content or Reel Video Editing ($115 value)</li>
  	<li>Monthly engagement (1,500+ likes, 55+ comments per post, 30,000+ views)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($249/mo) (Value: $1,350)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($126/mo) (Value: $690)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=626.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="626" data-product_sku="" aria-label="Add &ldquo;Professional&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Professional" data-price="5500">Add to cart</a></div></li><li class="product type-product post-627 status-publish first instock product_cat-popular-packages virtual purchasable product-type-simple">
    <a href="../service/advanced/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Advanced</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>2,500</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>25k real followers ($2,500 value)</li>
- 	<li>Published in 3 Articles (IB Reporter, American Daily Journal, Digital Journal) ($750+ value)</li>
+ 	<li>25k real followers ($1,280 value)</li>
+ 	<li>Published in 3 Articles (IB Reporter, American Daily Journal, Digital Journal) ($383+ value)</li>
  	<li>Monthly engagement (1,000+ likes, 50+ comments, 15,000+ views)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($199/mo) (Value: $1,000)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($100/mo) (Value: $511)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=627.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="627" data-product_sku="" aria-label="Add &ldquo;Advanced&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Advanced" data-price="2500">Add to cart</a></div></li><li class="product type-product post-628 status-publish instock product_cat-popular-packages virtual purchasable product-type-simple">
    <a href="../service/starter/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Starter</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>1,497</bdi></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>1,498</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>15k real followers ($1,500 value)</li>
+ 	<li>15k real followers ($767 value)</li>
  	<li>Monthly engagement (700+ likes, 35+ Comments, 10,000+ views Guaranteed)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
- 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($149/mo) (Value: $590)</li>
+ 	<li>Highly recommended maintenance fee after the first 31 days to continue to hit guaranteed engagement numbers included in this package, growth, and access to our private community group. ($75/mo) (Value: $300)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=628.html" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="628" data-product_sku="" aria-label="Add &ldquo;Starter&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Starter" data-price="1497">Add to cart</a></div></li><li class="product type-product post-1855 status-publish last instock product_cat-popular-packages virtual purchasable product-type-simple">
    <a href="../service/all-start-package/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">All Star</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>74,997</bdi></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>74,998</bdi></span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>775k real followers ($77,500 value)</li>
+ 	<li>775k real followers ($39,680 value)</li>
  	<li>Published in 18 Articles</li>
  	<li>Google Knowledge Panel (or additional press)</li>
- 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 9 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($8,490 Value)</li>
- 	<li>75 Pieces of Graphic Design Content or Reel Video Editing ($3,375 value)</li>
+ 	<li>31 Days Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 9 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($4,348 Value)</li>
+ 	<li>75 Pieces of Graphic Design Content or Reel Video Editing ($1,728 value)</li>
  	<li>Monthly engagement (25,000+ likes, 440,000+ views, 350+ comments per post)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs</li>
  	<li>Partnership access (Earn With Us)</li>
  	<li>24/7 team access (Priceless)</li>
@@ -2978,110 +3010,110 @@ For Personal Brands & Companies					</p>
    <a href="../service/tier-1/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 1</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>2,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>20k Real Followers Guaranteed Monthly ($2,000 Value)</li>
- 	<li>1 Custom Online Published Press Article ($300 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) ($849 Value)</li>
- 	<li>Monthly Engagement (750+ likes, 10,000+ views, 30+ comments) ($225 Value)</li>
- 	<li>1 Content Design / Top Tier Video Edit ($50 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($1,000+ Value)</li>
+ 	<li>20k Real Followers Guaranteed Monthly ($1,024 Value)</li>
+ 	<li>1 Custom Online Published Press Article ($152 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) ($433 Value)</li>
+ 	<li>Monthly Engagement (750+ likes, 10,000+ views, 30+ comments) ($115 Value)</li>
+ 	<li>1 Content Design / Top Tier Video Edit ($25 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul>
 &nbsp;</div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=866.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="866" data-product_sku="" aria-label="Add &ldquo;Tier 1&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 1" data-price="2000">Add to cart</a></div></li><li class="product type-product post-867 status-publish instock product_cat-monthly-packages virtual purchasable product-type-subscription">
    <a href="../service/tier-2/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 2</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>3,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>30k Real Followers Guaranteed Monthly ($3,000 Value)</li>
- 	<li>2 Custom Online Published Press Articles ($600 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) ($849 Value)</li>
- 	<li>Monthly Engagement (1,250+ likes, 20,000+ views, 40+ comments) ($400 Value)</li>
- 	<li>3 Content Designs / Top Tier Video Edit ($150 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($1,000+ Value)</li>
+ 	<li>30k Real Followers Guaranteed Monthly ($1,536 Value)</li>
+ 	<li>2 Custom Online Published Press Articles ($306 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) ($433 Value)</li>
+ 	<li>Monthly Engagement (1,250+ likes, 20,000+ views, 40+ comments) ($203 Value)</li>
+ 	<li>3 Content Designs / Top Tier Video Edit ($75 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=867.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="867" data-product_sku="" aria-label="Add &ldquo;Tier 2&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 2" data-price="3000">Add to cart</a></div></li><li class="product type-product post-868 status-publish last instock product_cat-monthly-packages virtual purchasable product-type-subscription">
    <a href="../service/tier-3/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 3</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>5,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>50k Real Followers Guaranteed Monthly ($5,000 Value)</li>
- 	<li>3 Custom Online Published Press Article ($900 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads)($849 Value)</li>
- 	<li>Monthly Engagement (1,750+ likes, 35,000+ views, 50+ comments) ($815 Value)</li>
- 	<li>5 Content Designs / Top Tier Video Edit ($250 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($1,000+ Value)</li>
+ 	<li>50k Real Followers Guaranteed Monthly ($2,560 Value)</li>
+ 	<li>3 Custom Online Published Press Article ($460 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads)($433 Value)</li>
+ 	<li>Monthly Engagement (1,750+ likes, 35,000+ views, 50+ comments) ($415 Value)</li>
+ 	<li>5 Content Designs / Top Tier Video Edit ($127 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=868.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="868" data-product_sku="" aria-label="Add &ldquo;Tier 3&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 3" data-price="5000">Add to cart</a></div></li><li class="product type-product post-869 status-publish first instock product_cat-monthly-packages virtual purchasable product-type-subscription">
    <a href="../service/tier-4/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 4</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>7,500</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>75k Real Followers Guaranteed Monthly ($7,500 Value)</li>
- 	<li>4 Custom Online Published Press Articles ($1,200 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 1 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($849 Value)</li>
- 	<li>8 Content Designs / Top Tier Video Edit ($400 Value)</li>
- 	<li>Monthly Engagement (2,500+ likes, 50,000+ views, 70+ comments) ($1,160 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs($1,000+ Value)</li>
+ 	<li>75k Real Followers Guaranteed Monthly ($3,840 Value)</li>
+ 	<li>4 Custom Online Published Press Articles ($613 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 1 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($433 Value)</li>
+ 	<li>8 Content Designs / Top Tier Video Edit ($203 Value)</li>
+ 	<li>Monthly Engagement (2,500+ likes, 50,000+ views, 70+ comments) ($592 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=869.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="869" data-product_sku="" aria-label="Add &ldquo;Tier 4&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 4" data-price="7500">Add to cart</a></div></li><li class="product type-product post-870 status-publish instock product_cat-monthly-packages featured virtual purchasable product-type-subscription">
    <a href="../service/tier-5/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 5</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>10,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>100k Real Followers Guaranteed Monthly ($10,000 Value)</li>
- 	<li>5 Custom Online Published Press Articles ($1,500 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 4 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($849 Value)</li>
- 	<li>Monthly Engagement (3,500+ likes, 70,000+ views, 85+ comments) ($1,600 Value)</li>
- 	<li>10 Content Designs / Top Tier Video Edit ($500 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($1,000+ Value)</li>
+ 	<li>100k Real Followers Guaranteed Monthly ($5,120 Value)</li>
+ 	<li>5 Custom Online Published Press Articles ($767 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 4 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($433 Value)</li>
+ 	<li>Monthly Engagement (3,500+ likes, 70,000+ views, 85+ comments) ($818 Value)</li>
+ 	<li>10 Content Designs / Top Tier Video Edit ($255 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=870.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="870" data-product_sku="" aria-label="Add &ldquo;Tier 5&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 5" data-price="10000">Add to cart</a></div></li><li class="product type-product post-871 status-publish last instock product_cat-monthly-packages virtual purchasable product-type-subscription">
    <a href="../service/tier-6/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 6</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>15,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>150k Real Followers Guaranteed Monthly ($15,000 Value)</li>
- 	<li>8 Custom Online Published Press Articles ($2,400 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 8 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($849 Value)</li>
- 	<li>Monthly Engagement (4,750+ likes, 80,000+ views, 90+ comments) ($1,880 Value)</li>
- 	<li>15 Content Designs / Top Tier Video Edit ($750 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
+ 	<li>150k Real Followers Guaranteed Monthly ($7,680 Value)</li>
+ 	<li>8 Custom Online Published Press Articles ($1,229 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 8 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($433 Value)</li>
+ 	<li>Monthly Engagement (4,750+ likes, 80,000+ views, 90+ comments) ($961 Value)</li>
+ 	<li>15 Content Designs / Top Tier Video Edit ($383 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
  	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs (+1,000 Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=871.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="871" data-product_sku="" aria-label="Add &ldquo;Tier 6&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 6" data-price="15000">Add to cart</a></div></li><li class="product type-product post-872 status-publish first instock product_cat-monthly-packages virtual purchasable product-type-subscription">
    <a href="../service/tier-7/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 7</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>20,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>180k Real Followers Guaranteed Monthly ($18,000 Value)</li>
- 	<li>12 Custom Online Published Press Articles ($3,600 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 12 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($849 Value)</li>
- 	<li>Monthly Engagement (5,500+ likes, 85,000+ views, 100+ comments) ($2,000 Value)</li>
- 	<li>20 Content Designs / Top Tier Video Edit ($1,000 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($1,000+ Value)</li>
+ 	<li>180k Real Followers Guaranteed Monthly ($9,216 Value)</li>
+ 	<li>12 Custom Online Published Press Articles ($1,842 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 12 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($433 Value)</li>
+ 	<li>Monthly Engagement (5,500+ likes, 85,000+ views, 100+ comments) ($1,024 Value)</li>
+ 	<li>20 Content Designs / Top Tier Video Edit ($511 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=872.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="872" data-product_sku="" aria-label="Add &ldquo;Tier 7&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 7" data-price="20000">Add to cart</a></div></li><li class="product type-product post-873 status-publish instock product_cat-monthly-packages virtual purchasable product-type-subscription">
    <a href="../service/tier-8/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 8</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>25,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>250k Real Followers Guaranteed Monthly ($25,000 Value)</li>
- 	<li>15 Custom Online Published Press Articles ($4,500 Value)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 15 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($849 Value)</li>
- 	<li>Monthly Engagement (6,250+ likes, 100,000+ views, 120+ comments) ($2,360 Value)</li>
- 	<li>25 Content Designs / Top Tier Video Edit ($1,250 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($1,000+ Value)</li>
+ 	<li>250k Real Followers Guaranteed Monthly ($12,800 Value)</li>
+ 	<li>15 Custom Online Published Press Articles ($2,304 Value)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 15 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($433 Value)</li>
+ 	<li>Monthly Engagement (6,250+ likes, 100,000+ views, 120+ comments) ($1,208 Value)</li>
+ 	<li>25 Content Designs / Top Tier Video Edit ($640 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=873.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="873" data-product_sku="" aria-label="Add &ldquo;Tier 8&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 8" data-price="25000">Add to cart</a></div></li><li class="product type-product post-874 status-publish last instock product_cat-monthly-packages virtual purchasable product-type-subscription">
    <a href="../service/tier-9/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Tier 9</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>30,000</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>350k Real Followers Guaranteed Monthly ($35,000 Value)</li>
- 	<li>18 Custom Online Published Press Articles ($5,400 Values)</li>
- 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 18 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($849 Value)</li>
- 	<li>Monthly Engagement (10,000+ likes, 125,000+ views, 150+ comments) ($3,000 Value)</li>
- 	<li>35 Content Designs / Top Tier Video Edit ($1,750 Value)</li>
- 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($1,500 value)</li>
- 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($1,000+ Value)</li>
+ 	<li>350k Real Followers Guaranteed Monthly ($17,920 Value)</li>
+ 	<li>18 Custom Online Published Press Articles ($2,765 Values)</li>
+ 	<li>Targeted Account Outreach (50 Highly Targeted DM's Sent Daily To Bring You Leads) + 18 Backup Page Complimentary (Sending an Additional 50 Targeted DM's Per Day) ($433 Value)</li>
+ 	<li>Monthly Engagement (10,000+ likes, 125,000+ views, 150+ comments) ($1,536 Value)</li>
+ 	<li>35 Content Designs / Top Tier Video Edit ($895 Value)</li>
+ 	<li>140+ training videos on how to build and monetize your personal brand or company on Instagram ($767 value)</li>
+ 	<li>Private Community on Discord with Thousands of like-minded 6-10 Figure Entrepreneurs ($511+ Value)</li>
  	<li>24/7 Team Access (Priceless)</li>
 </ul></div></a><div class="woocommerce-loop-product__buttons"><a href="index-add-to-cart=874.html" data-quantity="1" class="button product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="874" data-product_sku="" aria-label="Add &ldquo;Tier 9&rdquo; to your cart" aria-describedby="" rel="nofollow" data-product_name="Tier 9" data-price="30000">Add to cart</a></div></li></ul>
 </div>		</div>
@@ -3105,9 +3137,9 @@ For Personal Brands & Companies					</p>
    <a href="../service/starter-engagement/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Starter Engagement</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>150</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>1,000 real followers ($100 value)</li>
- 	<li>750+ likes per post, 10,000+ views per video ($225 value)</li>
- 	<li>25+ comments per post ($265 value)</li>
+ 	<li>1,000 real followers ($50 value)</li>
+ 	<li>750+ likes per post, 10,000+ views per video ($115 value)</li>
+ 	<li>25+ comments per post ($135 value)</li>
  	<li>100+ training videos on how to build and monetize your personal brand or company on Instagram</li>
  	<li>No Password required</li>
  	<li>Partnership access (Earn With Us)</li>
@@ -3118,9 +3150,9 @@ For Personal Brands & Companies					</p>
    <a href="../service/advanced-engagement/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Advanced Engagement</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>250</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>2,000 real followers ($250 value)</li>
- 	<li>1,250+ likes per post, 15,000+ views per video ($375 value)</li>
- 	<li>50+ comments per post ($375 value)</li>
+ 	<li>2,000 real followers ($127 value)</li>
+ 	<li>1,250+ likes per post, 15,000+ views per video ($191 value)</li>
+ 	<li>50+ comments per post ($191 value)</li>
  	<li>100+ training videos on how to build and monetize your personal brand or company on Instagram</li>
  	<li>No Password required</li>
  	<li>Partnership access (Earn With Us)</li>
@@ -3131,9 +3163,9 @@ For Personal Brands & Companies					</p>
    <a href="../service/professional-engagement/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Professional Engagement</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>600</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>3,500 real followers ($350 value)</li>
- 	<li>2,000+ likes per post, 25,000+ views per video ($600)</li>
- 	<li>60+ comments per post ($450 value)</li>
+ 	<li>3,500 real followers ($178 value)</li>
+ 	<li>2,000+ likes per post, 25,000+ views per video ($306)</li>
+ 	<li>60+ comments per post ($230 value)</li>
  	<li>100+ training videos on how to build and monetize your personal brand or company on Instagram</li>
  	<li>No Password required</li>
  	<li>Partnership access (Earn With Us)</li>
@@ -3144,9 +3176,9 @@ For Personal Brands & Companies					</p>
    <a href="../service/elite-engagement/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Elite Engagement</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>900</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>6,000 real followers ($600 value)</li>
- 	<li>3,500+ likes per post, 40,000+ views per video ($1,050 value)</li>
- 	<li>75+ comments per post ($565 value)</li>
+ 	<li>6,000 real followers ($306 value)</li>
+ 	<li>3,500+ likes per post, 40,000+ views per video ($536 value)</li>
+ 	<li>75+ comments per post ($287 value)</li>
  	<li>100+ training videos on how to build and monetize your personal brand or company on Instagram</li>
  	<li>No Password required</li>
  	<li>Partnership access (Earn With Us)</li>
@@ -3157,9 +3189,9 @@ For Personal Brands & Companies					</p>
    <a href="../service/top-tier-engagement/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">Top Tier Engagement</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>1,200</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>7,000 real followers ($700 value)</li>
- 	<li>4,500+ likes per post, 50,000+ views per video ($1,350 value)</li>
- 	<li>100+ comments per post ($750 value)</li>
+ 	<li>7,000 real followers ($357 value)</li>
+ 	<li>4,500+ likes per post, 50,000+ views per video ($690 value)</li>
+ 	<li>100+ comments per post ($383 value)</li>
  	<li>100+ training videos on how to build and monetize your personal brand or company on Instagram</li>
  	<li>No Password required</li>
  	<li>Partnership access (Earn With Us)</li>
@@ -3170,9 +3202,9 @@ For Personal Brands & Companies					</p>
    <a href="../service/high-status-engagemen/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img loading="lazy" decoding="async" width="300" height="300" src="../wp-content/uploads/woocommerce-placeholder-300x300.png" class="woocommerce-placeholder wp-post-image" alt="Placeholder" srcset="https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-300x300.png 300w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-100x100.png 100w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-600x600.png 600w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-1024x1024.png 1024w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-150x150.png 150w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder-768x768.png 768w, https://gwuagency.com/wp-content/uploads/woocommerce-placeholder.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /><h2 class="woocommerce-loop-product__title">High Status Engagement</h2>
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>2,899</bdi></span> <span class="subscription-details"> / month</span></span>
 </a><div class='tc_pord_cntent'><ul>
- 	<li>9,000 real followers ($900 value)</li>
- 	<li>5,500+ likes per post, 65,000+ views per video ($1,650 value)</li>
- 	<li>120+ comments per post ($900 value)</li>
+ 	<li>9,000 real followers ($460 value)</li>
+ 	<li>5,500+ likes per post, 65,000+ views per video ($843 value)</li>
+ 	<li>120+ comments per post ($460 value)</li>
  	<li>100+ training videos on how to build and monetize your personal brand or company on Instagram</li>
  	<li>No Password required</li>
  	<li>Partnership access (Earn With Us)</li>
@@ -3216,11 +3248,11 @@ For Personal Brands & Companies					</p>
 										<span class="elementor-icon-list-text">Miami Beach, Florida</span>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="mailto:info@growwithus.me">
+											<a href="mailto:contact@kolossmedia.com">
 
 												<span class="elementor-icon-list-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21.25H7C3.35 21.25 1.25 19.15 1.25 15.5V8.5C1.25 4.85 3.35 2.75 7 2.75H14C14.41 2.75 14.75 3.09 14.75 3.5C14.75 3.91 14.41 4.25 14 4.25H7C4.14 4.25 2.75 5.64 2.75 8.5V15.5C2.75 18.36 4.14 19.75 7 19.75H17C19.86 19.75 21.25 18.36 21.25 15.5V10.5C21.25 10.09 21.59 9.75 22 9.75C22.41 9.75 22.75 10.09 22.75 10.5V15.5C22.75 19.15 20.65 21.25 17 21.25Z" fill="white"></path><path d="M11.9998 12.8698C11.1598 12.8698 10.3098 12.6098 9.65978 12.0798L6.52978 9.57978C6.20978 9.31978 6.14978 8.84978 6.40978 8.52978C6.66978 8.20978 7.13977 8.14978 7.45977 8.40978L10.5898 10.9098C11.3498 11.5198 12.6398 11.5198 13.3998 10.9098L14.5798 9.96978C14.8998 9.70978 15.3798 9.75977 15.6298 10.0898C15.8898 10.4098 15.8398 10.8898 15.5098 11.1398L14.3298 12.0798C13.6898 12.6098 12.8398 12.8698 11.9998 12.8698Z" fill="white"></path><path d="M19.5 8.75C17.71 8.75 16.25 7.29 16.25 5.5C16.25 3.71 17.71 2.25 19.5 2.25C21.29 2.25 22.75 3.71 22.75 5.5C22.75 7.29 21.29 8.75 19.5 8.75ZM19.5 3.75C18.54 3.75 17.75 4.54 17.75 5.5C17.75 6.46 18.54 7.25 19.5 7.25C20.46 7.25 21.25 6.46 21.25 5.5C21.25 4.54 20.46 3.75 19.5 3.75Z" fill="white"></path></svg>						</span>
-										<span class="elementor-icon-list-text">info@growwithus.me</span>
+										<span class="elementor-icon-list-text">contact@kolossmedia.com</span>
 											</a>
 									</li>
 						</ul>

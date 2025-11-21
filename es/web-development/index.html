@@ -785,6 +785,38 @@ button.elementskit-menu-hamburger.elementskit-menu-toggler {
 .tc_offcan_active{
 	overflow: hidden;
 }
+
+/* Fix Services mega menu positioning on all pages */
+.elementskit-megamenu-panel {
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	z-index: 9999 !important;
+}
+
+.elementskit-dropdown-menu-full_width .elementskit-megamenu-panel {
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100vw !important;
+	margin-left: calc(-50vw + 50%) !important;
+}
+
+/* Fix Services mega menu background - match home page styling */
+.elementor-element-e58b781.mega-menu,
+.elementor-1087 .elementor-element.elementor-element-e58b781 {
+	background-color: #212121 !important;
+	padding: 50px 0px 40px 0px !important;
+	margin-top: 10px !important;
+	margin-bottom: 0px !important;
+}
+
+.elementskit-megamenu-panel .elementor-element-e58b781,
+.elementskit-megamenu-panel .mega-menu {
+	background-color: #212121 !important;
+}
+
 /* end */
 
 /* serach page */
@@ -1852,10 +1884,10 @@ select, .woocommerce-product-categories select {
 				</div>
 				<div class="elementor-element elementor-element-0d6af99 elementor-widget elementor-widget-icon-box" data-id="0d6af99" data-element_type="widget" data-widget_type="icon-box.default">
 				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="../../wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">		<div class="elementor-icon-box-wrapper">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">		<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/bundle-packages/index.html" >
+					<a href="/services/bundle-packages/index.html" >
 						Paquetes combinados 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1870,7 +1902,7 @@ Estructura para el éxito					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/personal-brand-company-page-automation/index.html" >
+					<a href="/services/personal-brand-company-page-automation/index.html" >
 						Paquetes CRO 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1897,7 +1929,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/popular-packages/index.html" >
+					<a href="/services/popular-packages/index.html" >
 						Popular					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1911,7 +1943,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/monthly-packages/index.html" >
+					<a href="/services/monthly-packages/index.html" >
 						Élite mensual					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1937,7 +1969,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
+					<a href="/service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
 						DM masivo dirigido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1951,7 +1983,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/advertising-packages/index.html" >
+					<a href="/services/advertising-packages/index.html" >
 						Anuncios digitales					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1966,7 +1998,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ig-account-outreach-2/index.html" >
+					<a href="/services/ig-account-outreach-2/index.html" >
 						Difusión de cuentas de Instagram 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1980,7 +2012,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/cold-email-outreach/index.html" >
+					<a href="/services/cold-email-outreach/index.html" >
 						Prospección por correo electrónico en frío 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1994,7 +2026,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/email-sms-marketing/index.html" >
+					<a href="/services/email-sms-marketing/index.html" >
 						 MARKETING POR CORREO ELECTRÓNICO Y SMS					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2008,7 +2040,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/seo-services/index.html" >
+					<a href="/services/seo-services/index.html" >
 						SERVICIOS SEO DE ALCANCE COMPLETO					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2022,7 +2054,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/content-distribution/index.html" >
+					<a href="/service/content-distribution/index.html" >
 						Distribución de contenido 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2041,99 +2073,99 @@ Para marcas personales y empresas					</p>
 				</div>
 				<div class="elementor-element elementor-element-5929ce7 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5929ce7" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="../../wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#tiktok">
+											<a href="/social-growth/index.html#tiktok">
 
 											<span class="elementor-icon-list-text">Tiktok</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#linkedin">
+											<a href="/social-growth/index.html#linkedin">
 
 											<span class="elementor-icon-list-text">LinkedIn </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitter">
+											<a href="/social-growth/index.html#twitter">
 
 											<span class="elementor-icon-list-text">Twitter</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#instagram">
+											<a href="/social-growth/index.html#instagram">
 
 											<span class="elementor-icon-list-text">Instagram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#facebook">
+											<a href="/social-growth/index.html#facebook">
 
 											<span class="elementor-icon-list-text">Facebook </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#youtube">
+											<a href="/social-growth/index.html#youtube">
 
 											<span class="elementor-icon-list-text">YouTube </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#discord">
+											<a href="/social-growth/index.html#discord">
 
 											<span class="elementor-icon-list-text">Discord</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#spotify">
+											<a href="/social-growth/index.html#spotify">
 
 											<span class="elementor-icon-list-text">Spotify</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#telegram">
+											<a href="/social-growth/index.html#telegram">
 
 											<span class="elementor-icon-list-text">Telegram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#reddit">
+											<a href="/social-growth/index.html#reddit">
 
 											<span class="elementor-icon-list-text">Reddit</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#clubhouse">
+											<a href="/social-growth/index.html#clubhouse">
 
 											<span class="elementor-icon-list-text">Club House</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#threads">
+											<a href="/social-growth/index.html#threads">
 
 											<span class="elementor-icon-list-text">Threads</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitch">
+											<a href="/social-growth/index.html#twitch">
 
 											<span class="elementor-icon-list-text">Twitch</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#truthsocial">
+											<a href="/social-growth/index.html#truthsocial">
 
 											<span class="elementor-icon-list-text">Truth Social</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#pinterest">
+											<a href="/social-growth/index.html#pinterest">
 
 											<span class="elementor-icon-list-text">Pinterest</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#quora">
+											<a href="/social-growth/index.html#quora">
 
 											<span class="elementor-icon-list-text">Quora</span>
 											</a>
@@ -2154,7 +2186,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="index.html" >
+					<a href="/" >
 						Desarrollo web/aplicaciones					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2168,7 +2200,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/community-dfy-buildout/index.html" >
+					<a href="/services/community-dfy-buildout/index.html" >
 						Desarrollo comunitario DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2182,7 +2214,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/content-packages/index.html" >
+					<a href="/services/content-packages/index.html" >
 						Creación de contenido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2196,7 +2228,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/design-packages/index.html" >
+					<a href="/services/design-packages/index.html" >
 						Diseño Gráfico					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2210,7 +2242,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/targeted-data-scraping/index.html" >
+					<a href="/service/targeted-data-scraping/index.html" >
 						Extracción de datos dirigida 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2224,7 +2256,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ai-services/index.html" >
+					<a href="/services/ai-services/index.html" >
 						SERVICIOS DE IA					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2238,7 +2270,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/consulting/index.html" >
+					<a href="/services/consulting/index.html" >
 						Consultante 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2252,7 +2284,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/dfy-podcast-launch/index.html" >
+					<a href="/service/dfy-podcast-launch/index.html" >
 						Lanzamiento del podcast DFY					</a>
 				</h3>
 							</div>
@@ -2264,7 +2296,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/dfy-white-label-agency/index.html" >
+					<a href="/services/dfy-white-label-agency/index.html" >
 						Agencia de marca blanca DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2361,7 +2393,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/bundle-packages/index.html" >
+					<a href="/services/bundle-packages/index.html" >
 						Paquetes combinados 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2376,7 +2408,7 @@ Estructura para el éxito					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/personal-brand-company-page-automation/index.html" >
+					<a href="/services/personal-brand-company-page-automation/index.html" >
 						Paquetes CRO 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2402,7 +2434,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/popular-packages/index.html" >
+					<a href="/services/popular-packages/index.html" >
 						Popular					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2416,7 +2448,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/monthly-packages/index.html" >
+					<a href="/services/monthly-packages/index.html" >
 						Élite mensual					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2442,7 +2474,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
+					<a href="/service/highly-targeted-100k-2m-people-day-dm-service/index.html" >
 						DM masivo dirigido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2456,7 +2488,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/advertising-packages/index.html" >
+					<a href="/services/advertising-packages/index.html" >
 						Anuncios digitales					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2471,7 +2503,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ig-account-outreach-2/index.html" >
+					<a href="/services/ig-account-outreach-2/index.html" >
 						Difusión de cuentas de Instagram 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2485,7 +2517,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/cold-email-outreach/index.html" >
+					<a href="/services/cold-email-outreach/index.html" >
 						Prospección por correo electrónico en frío 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2499,7 +2531,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/email-sms-marketing/index.html" >
+					<a href="/services/email-sms-marketing/index.html" >
 						 MARKETING POR CORREO ELECTRÓNICO Y SMS					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2513,7 +2545,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/seo-services/index.html" >
+					<a href="/services/seo-services/index.html" >
 						SERVICIOS SEO DE ALCANCE COMPLETO					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2527,7 +2559,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/content-distribution/index.html" >
+					<a href="/service/content-distribution/index.html" >
 						Distribución de contenido 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2548,97 +2580,97 @@ Para marcas personales y empresas					</p>
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#tiktok">
+											<a href="/social-growth/index.html#tiktok">
 
 											<span class="elementor-icon-list-text">Tiktok</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#linkedin">
+											<a href="/social-growth/index.html#linkedin">
 
 											<span class="elementor-icon-list-text">LinkedIn </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitter">
+											<a href="/social-growth/index.html#twitter">
 
 											<span class="elementor-icon-list-text">Twitter</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#instagram">
+											<a href="/social-growth/index.html#instagram">
 
 											<span class="elementor-icon-list-text">Instagram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#facebook">
+											<a href="/social-growth/index.html#facebook">
 
 											<span class="elementor-icon-list-text">Facebook </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#youtube">
+											<a href="/social-growth/index.html#youtube">
 
 											<span class="elementor-icon-list-text">YouTube </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#discord">
+											<a href="/social-growth/index.html#discord">
 
 											<span class="elementor-icon-list-text">Discord</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#spotify">
+											<a href="/social-growth/index.html#spotify">
 
 											<span class="elementor-icon-list-text">Spotify</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#telegram">
+											<a href="/social-growth/index.html#telegram">
 
 											<span class="elementor-icon-list-text">Telegram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#reddit">
+											<a href="/social-growth/index.html#reddit">
 
 											<span class="elementor-icon-list-text">Reddit</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#clubhouse">
+											<a href="/social-growth/index.html#clubhouse">
 
 											<span class="elementor-icon-list-text">Club House</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#threads">
+											<a href="/social-growth/index.html#threads">
 
 											<span class="elementor-icon-list-text">Threads</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#twitch">
+											<a href="/social-growth/index.html#twitch">
 
 											<span class="elementor-icon-list-text">Twitch</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#truthsocial">
+											<a href="/social-growth/index.html#truthsocial">
 
 											<span class="elementor-icon-list-text">Truth Social</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#pinterest">
+											<a href="/social-growth/index.html#pinterest">
 
 											<span class="elementor-icon-list-text">Pinterest</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../social-growth/index.html#quora">
+											<a href="/social-growth/index.html#quora">
 
 											<span class="elementor-icon-list-text">Quora</span>
 											</a>
@@ -2659,7 +2691,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="index.html" >
+					<a href="/" >
 						Desarrollo web/aplicaciones					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2673,7 +2705,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/community-dfy-buildout/index.html" >
+					<a href="/services/community-dfy-buildout/index.html" >
 						Desarrollo comunitario DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2687,7 +2719,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/content-packages/index.html" >
+					<a href="/services/content-packages/index.html" >
 						Creación de contenido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2701,7 +2733,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/design-packages/index.html" >
+					<a href="/services/design-packages/index.html" >
 						Diseño Gráfico					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2715,7 +2747,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/targeted-data-scraping/index.html" >
+					<a href="/service/targeted-data-scraping/index.html" >
 						Extracción de datos dirigida 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2729,7 +2761,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/ai-services/index.html" >
+					<a href="/services/ai-services/index.html" >
 						SERVICIOS DE IA					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2743,7 +2775,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/consulting/index.html" >
+					<a href="/services/consulting/index.html" >
 						Consultante 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2757,7 +2789,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../service/dfy-podcast-launch/index.html" >
+					<a href="/service/dfy-podcast-launch/index.html" >
 						Lanzamiento del podcast DFY					</a>
 				</h3>
 							</div>
@@ -2769,7 +2801,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../services/dfy-white-label-agency/index.html" >
+					<a href="/services/dfy-white-label-agency/index.html" >
 						Agencia de marca blanca DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2959,28 +2991,28 @@ var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","s
                     <div class='gform_page_fields'>
                         <div id='gform_fields_1_3' class='gform_fields top_label form_sublabel_below description_below'><fieldset id="field_1_3"  class="gfield gfield--type-radio gfield--type-choice gfield--width-full gf_list_2col gfield_contains_required field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"  data-js-reload="field_1_3"><legend class='gfield_label gform-field-label'  >What is your budget?<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></legend><div class='ginput_container ginput_container_radio'><div class='gfield_radio' id='input_1_3'>
 			<div class='gchoice gchoice_1_3_0'>
-					<input class='gfield-choice-input' name='input_3' type='radio' value='$1,000 USD'  id='choice_1_3_0' onchange='gformToggleRadioOther( this )'    />
-					<label for='choice_1_3_0' id='label_1_3_0' class='gform-field-label gform-field-label--type-inline'>$1,000 USD</label>
+					<input class='gfield-choice-input' name='input_3' type='radio' value='$511 USD'  id='choice_1_3_0' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_3_0' id='label_1_3_0' class='gform-field-label gform-field-label--type-inline'>$511 USD</label>
 			</div>
 			<div class='gchoice gchoice_1_3_1'>
-					<input class='gfield-choice-input' name='input_3' type='radio' value='$2,500 USD'  id='choice_1_3_1' onchange='gformToggleRadioOther( this )'    />
-					<label for='choice_1_3_1' id='label_1_3_1' class='gform-field-label gform-field-label--type-inline'>$2,500 USD</label>
+					<input class='gfield-choice-input' name='input_3' type='radio' value='$1,280 USD'  id='choice_1_3_1' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_3_1' id='label_1_3_1' class='gform-field-label gform-field-label--type-inline'>$1,280 USD</label>
 			</div>
 			<div class='gchoice gchoice_1_3_2'>
-					<input class='gfield-choice-input' name='input_3' type='radio' value='$5,000 USD'  id='choice_1_3_2' onchange='gformToggleRadioOther( this )'    />
-					<label for='choice_1_3_2' id='label_1_3_2' class='gform-field-label gform-field-label--type-inline'>$5,000 USD</label>
+					<input class='gfield-choice-input' name='input_3' type='radio' value='$2,560 USD'  id='choice_1_3_2' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_3_2' id='label_1_3_2' class='gform-field-label gform-field-label--type-inline'>$2,560 USD</label>
 			</div>
 			<div class='gchoice gchoice_1_3_3'>
-					<input class='gfield-choice-input' name='input_3' type='radio' value='$10,000 USD'  id='choice_1_3_3' onchange='gformToggleRadioOther( this )'    />
-					<label for='choice_1_3_3' id='label_1_3_3' class='gform-field-label gform-field-label--type-inline'>$10,000 USD</label>
+					<input class='gfield-choice-input' name='input_3' type='radio' value='$5,120 USD'  id='choice_1_3_3' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_3_3' id='label_1_3_3' class='gform-field-label gform-field-label--type-inline'>$5,120 USD</label>
 			</div>
 			<div class='gchoice gchoice_1_3_4'>
-					<input class='gfield-choice-input' name='input_3' type='radio' value='$20,000 USD'  id='choice_1_3_4' onchange='gformToggleRadioOther( this )'    />
-					<label for='choice_1_3_4' id='label_1_3_4' class='gform-field-label gform-field-label--type-inline'>$20,000 USD</label>
+					<input class='gfield-choice-input' name='input_3' type='radio' value='$10,240 USD'  id='choice_1_3_4' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_3_4' id='label_1_3_4' class='gform-field-label gform-field-label--type-inline'>$10,240 USD</label>
 			</div>
 			<div class='gchoice gchoice_1_3_5'>
-					<input class='gfield-choice-input' name='input_3' type='radio' value='$30,000+ USD'  id='choice_1_3_5' onchange='gformToggleRadioOther( this )'    />
-					<label for='choice_1_3_5' id='label_1_3_5' class='gform-field-label gform-field-label--type-inline'>$30,000+ USD</label>
+					<input class='gfield-choice-input' name='input_3' type='radio' value='$15,360+ USD'  id='choice_1_3_5' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_1_3_5' id='label_1_3_5' class='gform-field-label gform-field-label--type-inline'>$15,360+ USD</label>
 			</div></div></div></fieldset></div>
                     </div>
                     <div class='gform_page_footer top_label'>
@@ -3100,11 +3132,11 @@ gform.initializeOnLoaded( function() {gformInitSpinner( 1, 'https://gwuagency.co
 										<span class="elementor-icon-list-text">Miami Beach, Florida</span>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="mailto:info@growwithus.me">
+											<a href="mailto:contact@kolossmedia.com">
 
 												<span class="elementor-icon-list-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M17 21.25H7C3.35 21.25 1.25 19.15 1.25 15.5V8.5C1.25 4.85 3.35 2.75 7 2.75H14C14.41 2.75 14.75 3.09 14.75 3.5C14.75 3.91 14.41 4.25 14 4.25H7C4.14 4.25 2.75 5.64 2.75 8.5V15.5C2.75 18.36 4.14 19.75 7 19.75H17C19.86 19.75 21.25 18.36 21.25 15.5V10.5C21.25 10.09 21.59 9.75 22 9.75C22.41 9.75 22.75 10.09 22.75 10.5V15.5C22.75 19.15 20.65 21.25 17 21.25Z" fill="white"></path><path d="M11.9998 12.8698C11.1598 12.8698 10.3098 12.6098 9.65978 12.0798L6.52978 9.57978C6.20978 9.31978 6.14978 8.84978 6.40978 8.52978C6.66978 8.20978 7.13977 8.14978 7.45977 8.40978L10.5898 10.9098C11.3498 11.5198 12.6398 11.5198 13.3998 10.9098L14.5798 9.96978C14.8998 9.70978 15.3798 9.75977 15.6298 10.0898C15.8898 10.4098 15.8398 10.8898 15.5098 11.1398L14.3298 12.0798C13.6898 12.6098 12.8398 12.8698 11.9998 12.8698Z" fill="white"></path><path d="M19.5 8.75C17.71 8.75 16.25 7.29 16.25 5.5C16.25 3.71 17.71 2.25 19.5 2.25C21.29 2.25 22.75 3.71 22.75 5.5C22.75 7.29 21.29 8.75 19.5 8.75ZM19.5 3.75C18.54 3.75 17.75 4.54 17.75 5.5C17.75 6.46 18.54 7.25 19.5 7.25C20.46 7.25 21.25 6.46 21.25 5.5C21.25 4.54 20.46 3.75 19.5 3.75Z" fill="white"></path></svg>						</span>
-										<span class="elementor-icon-list-text">info@growwithus.me</span>
+										<span class="elementor-icon-list-text">contact@kolossmedia.com</span>
 											</a>
 									</li>
 						</ul>

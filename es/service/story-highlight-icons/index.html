@@ -788,6 +788,38 @@ button.elementskit-menu-hamburger.elementskit-menu-toggler {
 .tc_offcan_active{
 	overflow: hidden;
 }
+
+/* Fix Services mega menu positioning on all pages */
+.elementskit-megamenu-panel {
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	z-index: 9999 !important;
+}
+
+.elementskit-dropdown-menu-full_width .elementskit-megamenu-panel {
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100vw !important;
+	margin-left: calc(-50vw + 50%) !important;
+}
+
+/* Fix Services mega menu background - match home page styling */
+.elementor-element-e58b781.mega-menu,
+.elementor-1087 .elementor-element.elementor-element-e58b781 {
+	background-color: #212121 !important;
+	padding: 50px 0px 40px 0px !important;
+	margin-top: 10px !important;
+	margin-bottom: 0px !important;
+}
+
+.elementskit-megamenu-panel .elementor-element-e58b781,
+.elementskit-megamenu-panel .mega-menu {
+	background-color: #212121 !important;
+}
+
 /* end */
 
 /* serach page */
@@ -1855,10 +1887,10 @@ select, .woocommerce-product-categories select {
 				</div>
 				<div class="elementor-element elementor-element-0d6af99 elementor-widget elementor-widget-icon-box" data-id="0d6af99" data-element_type="widget" data-widget_type="icon-box.default">
 				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="../../../wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">		<div class="elementor-icon-box-wrapper">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">		<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/bundle-packages/index.html" >
+					<a href="/services/bundle-packages/index.html" >
 						Paquetes combinados 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1873,7 +1905,7 @@ Estructura para el éxito					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/personal-brand-company-page-automation/index.html" >
+					<a href="/services/personal-brand-company-page-automation/index.html" >
 						Paquetes CRO 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1900,7 +1932,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/popular-packages/index.html" >
+					<a href="/services/popular-packages/index.html" >
 						Popular					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1914,7 +1946,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/monthly-packages/index.html" >
+					<a href="/services/monthly-packages/index.html" >
 						Élite mensual					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1940,7 +1972,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../highly-targeted-100k-2m-people-day-dm-service/index.html" >
+					<a href="/highly-targeted-100k-2m-people-day-dm-service/index.html" >
 						DM masivo dirigido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1954,7 +1986,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/advertising-packages/index.html" >
+					<a href="/services/advertising-packages/index.html" >
 						Anuncios digitales					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1969,7 +2001,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/ig-account-outreach-2/index.html" >
+					<a href="/services/ig-account-outreach-2/index.html" >
 						Difusión de cuentas de Instagram 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1983,7 +2015,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/cold-email-outreach/index.html" >
+					<a href="/services/cold-email-outreach/index.html" >
 						Prospección por correo electrónico en frío 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -1997,7 +2029,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/email-sms-marketing/index.html" >
+					<a href="/services/email-sms-marketing/index.html" >
 						 MARKETING POR CORREO ELECTRÓNICO Y SMS					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2011,7 +2043,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/seo-services/index.html" >
+					<a href="/services/seo-services/index.html" >
 						SERVICIOS SEO DE ALCANCE COMPLETO					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2025,7 +2057,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../content-distribution/index.html" >
+					<a href="/content-distribution/index.html" >
 						Distribución de contenido 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2044,99 +2076,99 @@ Para marcas personales y empresas					</p>
 				</div>
 				<div class="elementor-element elementor-element-5929ce7 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5929ce7" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="../../../wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#tiktok">
+											<a href="/social-growth/index.html#tiktok">
 
 											<span class="elementor-icon-list-text">Tiktok</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#linkedin">
+											<a href="/social-growth/index.html#linkedin">
 
 											<span class="elementor-icon-list-text">LinkedIn </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#twitter">
+											<a href="/social-growth/index.html#twitter">
 
 											<span class="elementor-icon-list-text">Twitter</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#instagram">
+											<a href="/social-growth/index.html#instagram">
 
 											<span class="elementor-icon-list-text">Instagram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#facebook">
+											<a href="/social-growth/index.html#facebook">
 
 											<span class="elementor-icon-list-text">Facebook </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#youtube">
+											<a href="/social-growth/index.html#youtube">
 
 											<span class="elementor-icon-list-text">YouTube </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#discord">
+											<a href="/social-growth/index.html#discord">
 
 											<span class="elementor-icon-list-text">Discord</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#spotify">
+											<a href="/social-growth/index.html#spotify">
 
 											<span class="elementor-icon-list-text">Spotify</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#telegram">
+											<a href="/social-growth/index.html#telegram">
 
 											<span class="elementor-icon-list-text">Telegram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#reddit">
+											<a href="/social-growth/index.html#reddit">
 
 											<span class="elementor-icon-list-text">Reddit</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#clubhouse">
+											<a href="/social-growth/index.html#clubhouse">
 
 											<span class="elementor-icon-list-text">Club House</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#threads">
+											<a href="/social-growth/index.html#threads">
 
 											<span class="elementor-icon-list-text">Threads</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#twitch">
+											<a href="/social-growth/index.html#twitch">
 
 											<span class="elementor-icon-list-text">Twitch</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#truthsocial">
+											<a href="/social-growth/index.html#truthsocial">
 
 											<span class="elementor-icon-list-text">Truth Social</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#pinterest">
+											<a href="/social-growth/index.html#pinterest">
 
 											<span class="elementor-icon-list-text">Pinterest</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#quora">
+											<a href="/social-growth/index.html#quora">
 
 											<span class="elementor-icon-list-text">Quora</span>
 											</a>
@@ -2157,7 +2189,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../web-development/index.html" >
+					<a href="/web-development/index.html" >
 						Desarrollo web/aplicaciones					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2171,7 +2203,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/community-dfy-buildout/index.html" >
+					<a href="/services/community-dfy-buildout/index.html" >
 						Desarrollo comunitario DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2185,7 +2217,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/content-packages/index.html" >
+					<a href="/services/content-packages/index.html" >
 						Creación de contenido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2199,7 +2231,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/design-packages/index.html" >
+					<a href="/services/design-packages/index.html" >
 						Diseño Gráfico					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2213,7 +2245,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../targeted-data-scraping/index.html" >
+					<a href="/targeted-data-scraping/index.html" >
 						Extracción de datos dirigida 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2227,7 +2259,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/ai-services/index.html" >
+					<a href="/services/ai-services/index.html" >
 						SERVICIOS DE IA					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2241,7 +2273,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/consulting/index.html" >
+					<a href="/services/consulting/index.html" >
 						Consultante 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2255,7 +2287,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../dfy-podcast-launch/index.html" >
+					<a href="/dfy-podcast-launch/index.html" >
 						Lanzamiento del podcast DFY					</a>
 				</h3>
 							</div>
@@ -2267,7 +2299,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/dfy-white-label-agency/index.html" >
+					<a href="/services/dfy-white-label-agency/index.html" >
 						Agencia de marca blanca DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2364,7 +2396,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/bundle-packages/index.html" >
+					<a href="/services/bundle-packages/index.html" >
 						Paquetes combinados 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2379,7 +2411,7 @@ Estructura para el éxito					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/personal-brand-company-page-automation/index.html" >
+					<a href="/services/personal-brand-company-page-automation/index.html" >
 						Paquetes CRO 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2405,7 +2437,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/popular-packages/index.html" >
+					<a href="/services/popular-packages/index.html" >
 						Popular					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2419,7 +2451,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/monthly-packages/index.html" >
+					<a href="/services/monthly-packages/index.html" >
 						Élite mensual					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2445,7 +2477,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../highly-targeted-100k-2m-people-day-dm-service/index.html" >
+					<a href="/highly-targeted-100k-2m-people-day-dm-service/index.html" >
 						DM masivo dirigido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2459,7 +2491,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/advertising-packages/index.html" >
+					<a href="/services/advertising-packages/index.html" >
 						Anuncios digitales					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2474,7 +2506,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/ig-account-outreach-2/index.html" >
+					<a href="/services/ig-account-outreach-2/index.html" >
 						Difusión de cuentas de Instagram 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2488,7 +2520,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/cold-email-outreach/index.html" >
+					<a href="/services/cold-email-outreach/index.html" >
 						Prospección por correo electrónico en frío 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2502,7 +2534,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/email-sms-marketing/index.html" >
+					<a href="/services/email-sms-marketing/index.html" >
 						 MARKETING POR CORREO ELECTRÓNICO Y SMS					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2516,7 +2548,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/seo-services/index.html" >
+					<a href="/services/seo-services/index.html" >
 						SERVICIOS SEO DE ALCANCE COMPLETO					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2530,7 +2562,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../content-distribution/index.html" >
+					<a href="/content-distribution/index.html" >
 						Distribución de contenido 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2551,97 +2583,97 @@ Para marcas personales y empresas					</p>
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#tiktok">
+											<a href="/social-growth/index.html#tiktok">
 
 											<span class="elementor-icon-list-text">Tiktok</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#linkedin">
+											<a href="/social-growth/index.html#linkedin">
 
 											<span class="elementor-icon-list-text">LinkedIn </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#twitter">
+											<a href="/social-growth/index.html#twitter">
 
 											<span class="elementor-icon-list-text">Twitter</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#instagram">
+											<a href="/social-growth/index.html#instagram">
 
 											<span class="elementor-icon-list-text">Instagram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#facebook">
+											<a href="/social-growth/index.html#facebook">
 
 											<span class="elementor-icon-list-text">Facebook </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#youtube">
+											<a href="/social-growth/index.html#youtube">
 
 											<span class="elementor-icon-list-text">YouTube </span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#discord">
+											<a href="/social-growth/index.html#discord">
 
 											<span class="elementor-icon-list-text">Discord</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#spotify">
+											<a href="/social-growth/index.html#spotify">
 
 											<span class="elementor-icon-list-text">Spotify</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#telegram">
+											<a href="/social-growth/index.html#telegram">
 
 											<span class="elementor-icon-list-text">Telegram</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#reddit">
+											<a href="/social-growth/index.html#reddit">
 
 											<span class="elementor-icon-list-text">Reddit</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#clubhouse">
+											<a href="/social-growth/index.html#clubhouse">
 
 											<span class="elementor-icon-list-text">Club House</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#threads">
+											<a href="/social-growth/index.html#threads">
 
 											<span class="elementor-icon-list-text">Threads</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#twitch">
+											<a href="/social-growth/index.html#twitch">
 
 											<span class="elementor-icon-list-text">Twitch</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#truthsocial">
+											<a href="/social-growth/index.html#truthsocial">
 
 											<span class="elementor-icon-list-text">Truth Social</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#pinterest">
+											<a href="/social-growth/index.html#pinterest">
 
 											<span class="elementor-icon-list-text">Pinterest</span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../../social-growth/index.html#quora">
+											<a href="/social-growth/index.html#quora">
 
 											<span class="elementor-icon-list-text">Quora</span>
 											</a>
@@ -2662,7 +2694,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../web-development/index.html" >
+					<a href="/web-development/index.html" >
 						Desarrollo web/aplicaciones					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2676,7 +2708,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/community-dfy-buildout/index.html" >
+					<a href="/services/community-dfy-buildout/index.html" >
 						Desarrollo comunitario DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2690,7 +2722,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/content-packages/index.html" >
+					<a href="/services/content-packages/index.html" >
 						Creación de contenido					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2704,7 +2736,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/design-packages/index.html" >
+					<a href="/services/design-packages/index.html" >
 						Diseño Gráfico					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2718,7 +2750,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../targeted-data-scraping/index.html" >
+					<a href="/targeted-data-scraping/index.html" >
 						Extracción de datos dirigida 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2732,7 +2764,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/ai-services/index.html" >
+					<a href="/services/ai-services/index.html" >
 						SERVICIOS DE IA					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2746,7 +2778,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/consulting/index.html" >
+					<a href="/services/consulting/index.html" >
 						Consultante 					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2760,7 +2792,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../dfy-podcast-launch/index.html" >
+					<a href="/dfy-podcast-launch/index.html" >
 						Lanzamiento del podcast DFY					</a>
 				</h3>
 							</div>
@@ -2772,7 +2804,7 @@ Para marcas personales y empresas					</p>
 					<div class="elementor-icon-box-wrapper">
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<a href="../../services/dfy-white-label-agency/index.html" >
+					<a href="/services/dfy-white-label-agency/index.html" >
 						Agencia de marca blanca DFY					</a>
 				</h3>
 									<p class="elementor-icon-box-description">
@@ -2850,14 +2882,14 @@ Para marcas personales y empresas					</p>
 			
 		<div class="elementor-add-to-cart elementor-product-variable">
 			
-<form class="variations_form cart" action="https://gwuagency.com/es/service/story-highlight-icons/" method="post" enctype='multipart/form-data' data-product_id="1552" data-product_variations="[{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;5 - $70&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/A&quot;,&quot;display_price&quot;:70,&quot;display_regular_price&quot;:70,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png 600w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png 300w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-1024x526.png 1024w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-768x395.png 768w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;70&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1643,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1},{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;10 - $125&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/A&quot;,&quot;display_price&quot;:125,&quot;display_regular_price&quot;:125,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png 600w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png 300w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-1024x526.png 1024w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-768x395.png 768w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;125&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1644,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1},{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;15 - $180&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/A&quot;,&quot;display_price&quot;:180,&quot;display_regular_price&quot;:180,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png 600w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png 300w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-1024x526.png 1024w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-768x395.png 768w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;180&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1645,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1},{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;20 - $225&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/A&quot;,&quot;display_price&quot;:225,&quot;display_regular_price&quot;:225,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-600x308.png 600w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png 300w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-1024x526.png 1024w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-768x395.png 768w, https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https:\/\/gwuagency.com\/wp-content\/uploads\/2022\/12\/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;225&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1646,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1}]" data-trp-original-action="https://gwuagency.com/es/service/story-highlight-icons/">
+<form class="variations_form cart" action="https://gwuagency.com/es/service/story-highlight-icons/" method="post" enctype='multipart/form-data' data-product_id="1552" data-product_variations="[{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;5 - &#36;35&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N/A&quot;,&quot;display_price&quot;:35,&quot;display_regular_price&quot;:35,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png 600w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png 300w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-1024x526.png 1024w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-768x395.png 768w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&#16;&lt;/span&gt;35&lt;/bdi&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1643,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1},{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;10 - &#36;63&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N/A&quot;,&quot;display_price&quot;:63,&quot;display_regular_price&quot;:63,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png 600w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png 300w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-1024x526.png 1024w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-768x395.png 768w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&#16;&lt;/span&gt;63&lt;/bdi&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1644,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1},{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;15 - &#36;91&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N/A&quot;,&quot;display_price&quot;:91,&quot;display_regular_price&quot;:91,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png 600w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png 300w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-1024x526.png 1024w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-768x395.png 768w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&#16;&lt;/span&gt;91&lt;/bdi&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1645,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1},{&quot;attributes&quot;:{&quot;attribute_packages&quot;:&quot;20 - &#36;115&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N/A&quot;,&quot;display_price&quot;:115,&quot;display_regular_price&quot;:115,&quot;image&quot;:{&quot;title&quot;:&quot;ThumnailGWu&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;alt&quot;:&quot;ThumnailGWu&quot;,&quot;src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png&quot;,&quot;srcset&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-600x308.png 600w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png 300w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-1024x526.png 1024w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-768x395.png 768w, https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png 1424w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu.png&quot;,&quot;full_src_w&quot;:1424,&quot;full_src_h&quot;:732,&quot;gallery_thumbnail_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-100x100.png&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https://gwuagency.com/wp-content/uploads/2022/12/ThumnailGWu-300x154.png&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:154,&quot;src_w&quot;:600,&quot;src_h&quot;:308},&quot;image_id&quot;:15579,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:true,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&#16;&lt;/span&gt;115&lt;/bdi&gt;&lt;/span&gt;&lt;/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1646,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N/A&quot;,&quot;tax&quot;:1,&quot;taxFactor&quot;:1}]" data-trp-original-action="https://gwuagency.com/es/service/story-highlight-icons/">
 	
 			<table class="variations" cellspacing="0" role="presentation">
 			<tbody>
 									<tr>
 						<th class="label"><label for="packages">Paquetes</label></th>
 						<td class="value">
-							<select id="packages" class="" name="attribute_packages" data-attribute_name="attribute_packages" data-show_option_none="yes"><option value="">Paquetes</option><option value="5 - $70" >5 - $70</option><option value="10 - $125" >10 - $125</option><option value="15 - $180" >15 - $180</option><option value="20 - $225" >20 - $225</option></select><a class="reset_variations" href="index.html#" data-no-translation="" data-trp-gettext="">Clear</a>						</td>
+							<select id="packages" class="" name="attribute_packages" data-attribute_name="attribute_packages" data-show_option_none="yes"><option value="">Paquetes</option><option value="5 - $35" >5 - $35</option><option value="10 - $63" >10 - $63</option><option value="15 - $91" >15 - $91</option><option value="20 - $115" >20 - $115</option></select><a class="reset_variations" href="index.html#" data-no-translation="" data-trp-gettext="">Clear</a>						</td>
 					</tr>
 							</tbody>
 		</table>
@@ -2946,11 +2978,11 @@ Para marcas personales y empresas					</p>
 										<span class="elementor-icon-list-text">Miami Beach, Florida</span>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="mailto:info@growwithus.me">
+											<a href="mailto:contact@kolossmedia.com">
 
 												<span class="elementor-icon-list-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M17 21.25H7C3.35 21.25 1.25 19.15 1.25 15.5V8.5C1.25 4.85 3.35 2.75 7 2.75H14C14.41 2.75 14.75 3.09 14.75 3.5C14.75 3.91 14.41 4.25 14 4.25H7C4.14 4.25 2.75 5.64 2.75 8.5V15.5C2.75 18.36 4.14 19.75 7 19.75H17C19.86 19.75 21.25 18.36 21.25 15.5V10.5C21.25 10.09 21.59 9.75 22 9.75C22.41 9.75 22.75 10.09 22.75 10.5V15.5C22.75 19.15 20.65 21.25 17 21.25Z" fill="white"></path><path d="M11.9998 12.8698C11.1598 12.8698 10.3098 12.6098 9.65978 12.0798L6.52978 9.57978C6.20978 9.31978 6.14978 8.84978 6.40978 8.52978C6.66978 8.20978 7.13977 8.14978 7.45977 8.40978L10.5898 10.9098C11.3498 11.5198 12.6398 11.5198 13.3998 10.9098L14.5798 9.96978C14.8998 9.70978 15.3798 9.75977 15.6298 10.0898C15.8898 10.4098 15.8398 10.8898 15.5098 11.1398L14.3298 12.0798C13.6898 12.6098 12.8398 12.8698 11.9998 12.8698Z" fill="white"></path><path d="M19.5 8.75C17.71 8.75 16.25 7.29 16.25 5.5C16.25 3.71 17.71 2.25 19.5 2.25C21.29 2.25 22.75 3.71 22.75 5.5C22.75 7.29 21.29 8.75 19.5 8.75ZM19.5 3.75C18.54 3.75 17.75 4.54 17.75 5.5C17.75 6.46 18.54 7.25 19.5 7.25C20.46 7.25 21.25 6.46 21.25 5.5C21.25 4.54 20.46 3.75 19.5 3.75Z" fill="white"></path></svg>						</span>
-										<span class="elementor-icon-list-text">info@growwithus.me</span>
+										<span class="elementor-icon-list-text">contact@kolossmedia.com</span>
 											</a>
 									</li>
 						</ul>
