@@ -106,14 +106,30 @@
 	color: #ec9538;
 	box-shadow: 0 1px 4px 0;
 	border-radius: 50%;
-	display: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 60px;
 	height: 60px;
 }
 
 
 .xoo-wsc-bki{
-	font-size: 30px}
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.xoo-wsc-smr-del {
+	cursor: pointer !important;
+	pointer-events: auto !important;
+}
+
+.xoo-wsc-smr-del:hover {
+	opacity: 0.8;
+}
+
+
 
 .xoo-wsc-items-count{
 	top: -12px;
@@ -124,6 +140,48 @@
 	background-color: #ec9538;
 	color: #ffffff;
 }
+
+.xoo-wsc-smr-del {
+	cursor: pointer !important;
+	pointer-events: auto !important;
+}
+
+.xoo-wsc-smr-del:hover {
+	opacity: 0.8;
+}
+
+/* Fix cart delete loading issue - completely hide loading overlay */
+.xoo-wsc-product.xoo-wsc-loading::before {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+/* Also hide any loading spinners or icons */
+.xoo-wsc-product.xoo-wsc-loading .xoo-wsc-loader-icon,
+.xoo-wsc-product.xoo-wsc-loading .xoo-wsc-icon-spinner8 {
+	display: none !important;
+}
+
+/* Prevent loading state from blocking interaction */
+.xoo-wsc-product.xoo-wsc-loading {
+	pointer-events: auto !important;
+	opacity: 1 !important;
+}
+
+/* Also hide any loading spinners or icons */
+.xoo-wsc-product.xoo-wsc-loading .xoo-wsc-loader-icon,
+.xoo-wsc-product.xoo-wsc-loading .xoo-wsc-icon-spinner8 {
+	display: none !important;
+}
+
+/* Prevent loading state from blocking interaction */
+.xoo-wsc-product.xoo-wsc-loading {
+	pointer-events: auto !important;
+	opacity: 1 !important;
+}
+
+/* Auto-clear loading state after 5 seconds to prevent stuck loading */
 
 .xoo-wsc-container, .xoo-wsc-slider{
 	max-width: 320px;
@@ -292,6 +350,120 @@ jQuery(document).ready(function( $ ){
       			jQuery(this).next('.eng_compare_text').hide()
 			} 
 	})
+	
+	// Fix cart delete functionality - intercept and handle deletion manually
+	// Wait for plugin to load, then replace its handler
+	setTimeout(function() {
+		// Unbind plugin's handler first, then add our own
+		jQuery(document).off('click', '.xoo-wsc-smr-del');
+		
+		// Use capture phase to run before plugin's handler
+		jQuery(document).on('click', '.xoo-wsc-smr-del', function(e) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		e.stopPropagation();
+		
+		var $product = jQuery(this).closest('.xoo-wsc-product');
+		var cartKey = $product.data('key');
+		
+		if (!cartKey) {
+			console.log('No cart key found, cannot delete item');
+			return false;
+		}
+		
+		// Get item price for total calculation
+		var $priceElement = $product.find('.woocommerce-Price-amount');
+		var itemPrice = 0;
+		if ($priceElement.length) {
+			var priceText = $priceElement.last().text().replace(/[^0-9.]/g, '');
+			itemPrice = parseFloat(priceText) || 0;
+		}
+		
+		// Remove the product from DOM immediately with animation
+		$product.fadeOut(300, function() {
+			$product.remove();
+			
+			// Update cart count
+			var remainingItems = jQuery('.xoo-wsc-product').length;
+			jQuery('.xoo-wsc-items-count').text(remainingItems);
+			jQuery('.xoo-wscb-count').text(remainingItems);
+			
+			// Update cart totals (if total element exists)
+			var $totalElement = jQuery('.xoo-wsc-ft-price .woocommerce-Price-amount');
+			if ($totalElement.length && itemPrice > 0) {
+				var currentTotalText = $totalElement.text().replace(/[^0-9.]/g, '');
+				var currentTotal = parseFloat(currentTotalText) || 0;
+				var newTotal = Math.max(0, currentTotal - itemPrice);
+				$totalElement.html('<bdi><span class="woocommerce-Price-currencySymbol">$</span>' + newTotal.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</bdi>');
+			}
+			
+			// If cart is empty, show empty cart message
+			if (remainingItems === 0) {
+				jQuery('.xoo-wsc-products').html('<p style="padding: 20px; text-align: center; color: #bebebe;">Your cart is empty</p>');
+				jQuery('.xoo-wsc-footer').hide();
+			}
+			
+			// Trigger cart update event for other scripts
+			jQuery(document.body).trigger('xoo_wsc_cart_updated');
+			jQuery(document.body).trigger('wc_fragment_refresh');
+		});
+		
+		return false;
+		});
+	}, 500); // Wait 500ms for plugin to initialize
+	
+	// Use MutationObserver to watch for loading class being added and remove it immediately
+	if (typeof MutationObserver !== 'undefined') {
+		var observer = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+					var $target = jQuery(mutation.target);
+					if ($target.hasClass('xoo-wsc-product') && $target.hasClass('xoo-wsc-loading')) {
+						setTimeout(function() {
+							$target.removeClass('xoo-wsc-loading');
+						}, 100);
+					}
+				}
+			});
+		});
+		
+		// Observe all cart products
+		jQuery(document).ready(function() {
+			jQuery('.xoo-wsc-product').each(function() {
+				observer.observe(this, { attributes: true, attributeFilter: ['class'] });
+			});
+			
+			// Also observe dynamically added products
+			jQuery(document).on('DOMNodeInserted', '.xoo-wsc-product', function() {
+				observer.observe(this, { attributes: true, attributeFilter: ['class'] });
+			});
+		});
+	}
+	
+	// Global handler to clear loading states on AJAX errors
+	jQuery(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
+		jQuery('.xoo-wsc-product.xoo-wsc-loading').removeClass('xoo-wsc-loading');
+	});
+	
+	// Also clear loading state when AJAX completes (success or error)
+	jQuery(document).ajaxComplete(function(event, xhr, settings) {
+		if (settings.url && (settings.url.indexOf('xoo_wsc') !== -1 || settings.url.indexOf('admin-ajax') !== -1)) {
+			setTimeout(function() {
+				jQuery('.xoo-wsc-product.xoo-wsc-loading').removeClass('xoo-wsc-loading');
+			}, 100);
+		}
+	});
+	
+	// Periodic check to remove stuck loading states
+	setInterval(function() {
+		jQuery('.xoo-wsc-product.xoo-wsc-loading').each(function() {
+			var $this = jQuery(this);
+			var addedTime = $this.data('loading-added') || Date.now();
+			if (Date.now() - addedTime > 1000) {
+				$this.removeClass('xoo-wsc-loading');
+			}
+		});
+	}, 500);
 	
 
 	
