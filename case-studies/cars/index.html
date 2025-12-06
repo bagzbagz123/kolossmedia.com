@@ -5,6 +5,9 @@
 <style id="mobile-overflow-fix">
 /* Fix horizontal overflow on mobile devices */
 @media screen and (max-width: 767px) {
+	* {
+		box-sizing: border-box !important;
+	}
 	html, body {
 		overflow-x: hidden !important;
 		width: 100% !important;
@@ -21,26 +24,58 @@
 	}
 	.elementor-container {
 		max-width: 100% !important;
-		padding-left: 15px !important;
-		padding-right: 15px !important;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
 	}
 	/* Only constrain full-width columns, not 50% image columns */
 	.elementor-col-100 {
 		width: 100% !important;
 		max-width: 100% !important;
 	}
-	/* Preserve 50% width for side-by-side images */
+	/* Preserve 50% width for side-by-side images - STRICT */
 	.elementor-col-50 {
 		width: 50% !important;
 		max-width: 50% !important;
 		flex: 0 0 50% !important;
+		padding: 0 3px !important;
+		box-sizing: border-box !important;
 	}
-	/* Enhanced image handling */
-	img {
+	.elementor-col-50 .elementor-widget-wrap {
+		padding: 0 !important;
+	}
+	/* Enhanced image handling - STRICT sizing */
+	.elementor-col-50 img {
 		max-width: 100% !important;
-		width: auto !important;
+		width: 100% !important;
 		height: auto !important;
 		object-fit: contain !important;
+		display: block !important;
+	}
+	.elementor-col-50 .elementor-widget-image {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	.elementor-col-50 .elementor-widget-image img,
+	.elementor-col-50 .elementor-widget-image .elementor-image img {
+		max-width: 100% !important;
+		width: 100% !important;
+		height: auto !important;
+		object-fit: contain !important;
+	}
+	.elementor-col-50 .elementor-widget-image .elementor-image {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+	.elementor-col-50 .elementor-widget-image .elementor-widget-container {
+		max-width: 100% !important;
+		width: 100% !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	/* General image rules */
+	img {
+		max-width: 100% !important;
+		height: auto !important;
 	}
 	.elementor-widget-image img,
 	.elementor-widget-image .elementor-image img {
@@ -57,7 +92,7 @@
 		max-width: 100% !important;
 		width: 100% !important;
 	}
-	/* Remove overflow from widget containers to prevent scrollbars */
+	/* Remove overflow from widget containers */
 	.elementor-widget-container {
 		max-width: 100% !important;
 	}
@@ -77,6 +112,15 @@
 	}
 	.elementor-section-wrap {
 		max-width: 100% !important;
+	}
+
+	/* Footer logo size restriction */
+	footer .tc_footer_logo img,
+	footer .elementor-widget-theme-site-logo img,
+	.elementor-location-footer img[src*="logo"] {
+		max-width: 80px !important;
+		width: auto !important;
+		height: auto !important;
 	}
 }
 </style>
