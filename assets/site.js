@@ -82,6 +82,11 @@ if (form) {
   const summary = document.querySelector('#brief-summary');
   const brief = document.querySelector('#brief');
   const goal = form.elements.goal;
+  // Make optional fields reachable if their validation needs attention.
+  form.addEventListener('invalid', event => {
+    const details = document.querySelector('#brief-details');
+    if (details?.contains(event.target)) details.open = true;
+  }, true);
   if (campaignContext.utm_source) form.elements.discovery.value = campaignContext.utm_source;
   form.addEventListener('input', () => {
     goal.setCustomValidity('');
