@@ -1,6 +1,7 @@
 User-agent: *
-Disallow: /wp-admin/
-Allow: /wp-admin/admin-ajax.php
-Crawl-delay: 10
-
-Sitemap: https://gwuagency.com/wp-sitemap.xml
+Allow: /
+Disallow: /wp-json/
+Disallow: /wp-includes/
+Disallow: /docs/
+Disallow: /_downloads.html
+Sitemap: https://www.kolossmedia.com/sitemap.xml

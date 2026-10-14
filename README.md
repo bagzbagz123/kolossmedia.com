@@ -17,3 +17,7 @@ The supplied repository contains the older WordPress archive rather than the dif
 The homepage includes mobile navigation, a goal-based package finder, and a scope comparison. The consultation page distinguishes service and media budgets, rejects blank goals, refreshes changed briefs, and downloads notes. Local browser event hooks are documented in [the acquisition plan](docs/acquisition-plan.md); they do not transmit data or configure analytics.
 
 The Vercel Git integration successfully built a PR preview from this repository. Production-domain mapping and package scope still require review before release. Internal pipeline/workbench tools are delivered separately and are not served by this repository.
+
+## Legacy links and search metadata
+
+The Vercel configuration redirects the archived catalog, product, cart, checkout, account, and case-study entry points into the current site. The partnership page now explains introductions and uses the existing business email without promising unconfirmed commission terms. Current entry points have canonical metadata and a sitemap. See [the route migration](docs/legacy-route-migration.md) for destinations and verification. Archive files and the existing terms-and-conditions page are preserved.
