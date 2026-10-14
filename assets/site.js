@@ -77,7 +77,10 @@ if (finder) {
 }
 const form = document.querySelector('#consultation-form');
 if (form) {
-  const interest = new URLSearchParams(window.location.search).get('interest');
+  const intakeQuery = new URLSearchParams(window.location.search);
+  const interest = intakeQuery.get('interest');
+  const audience = intakeQuery.get('audience');
+  if (['business', 'brand', 'both'].includes(audience)) form.elements.audience.value = audience;
   if (['core', 'scale', 'custom', 'content'].includes(interest)) form.elements.interest.value = interest;
   const summary = document.querySelector('#brief-summary');
   const brief = document.querySelector('#brief');

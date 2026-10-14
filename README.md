@@ -29,3 +29,7 @@ Supported campaign tags follow internal links into the consultation brief withou
 ## Shorter consultation path
 
 The calendar and email links are available before the optional brief. The brief initially asks for audience, service interest, and goal; links, budgets, timing, and source remain in a native disclosure. Validation opens the disclosure when an optional answer needs correction. No booking or lead submission happens automatically.
+
+## Content production
+
+`/content/` gives the existing Custom content service a focused landing page with portfolio examples, audience-specific consultation links, scope questions, and canonical/social metadata. The homepage links to it and the sitemap includes it. Audience query preselection accepts only `business`, `brand`, or `both`. Deliverable quantities, fees, and dates remain scoped in the proposal.
