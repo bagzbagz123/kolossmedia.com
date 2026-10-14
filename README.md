@@ -25,3 +25,7 @@ The Vercel configuration redirects the archived catalog, product, cart, checkout
 ## Inquiry sources
 
 Supported campaign tags follow internal links into the consultation brief without cookies, local storage, or network reporting. Visitors can correct the optional source answer. The brief separately records link tags, which indicate the link used, not verified causation. Email drafts require the visitor to review and send in their email app. See [inquiry measurement](docs/inquiry-measurement.md) for the supported labels and reconciliation steps.
+
+## Shorter consultation path
+
+The calendar and email links are available before the optional brief. The brief initially asks for audience, service interest, and goal; links, budgets, timing, and source remain in a native disclosure. Validation opens the disclosure when an optional answer needs correction. No booking or lead submission happens automatically.
