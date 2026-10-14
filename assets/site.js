@@ -11,6 +11,11 @@ document.querySelectorAll('a[href*="book-a-call/"]').forEach(link => {
 document.querySelectorAll('a[href^="https://cal.com/"]').forEach(link => {
   link.addEventListener('click', () => conversion('calendar_opened', document.querySelector('#interest')?.value || 'unsure'));
 });
+const requestedSection = new URLSearchParams(window.location.search).get('section');
+if (['packages', 'work', 'services', 'approach'].includes(requestedSection)) {
+  const section = document.getElementById(requestedSection);
+  if (section) section.scrollIntoView({ behavior: 'instant', block: 'start' });
+}
 const mobileNavigation = document.querySelector('.mobile-nav');
 if (mobileNavigation) {
   mobileNavigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { mobileNavigation.open = false; }));
