@@ -2,8 +2,28 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/services",
+      "destination": "/?section=packages",
+      "permanent": false
+    },
+    {
+      "source": "/services/",
+      "destination": "/?section=packages",
+      "permanent": false
+    },
+    {
       "source": "/services/:path*",
       "destination": "/?section=packages",
+      "permanent": false
+    },
+    {
+      "source": "/service",
+      "destination": "/book-a-call/index.html?interest=custom",
+      "permanent": false
+    },
+    {
+      "source": "/service/",
+      "destination": "/book-a-call/index.html?interest=custom",
       "permanent": false
     },
     {
@@ -12,7 +32,27 @@
       "permanent": false
     },
     {
+      "source": "/growth",
+      "destination": "/?section=packages",
+      "permanent": false
+    },
+    {
+      "source": "/growth/",
+      "destination": "/?section=packages",
+      "permanent": false
+    },
+    {
       "source": "/growth/:path*",
+      "destination": "/?section=packages",
+      "permanent": false
+    },
+    {
+      "source": "/social-growth",
+      "destination": "/?section=packages",
+      "permanent": false
+    },
+    {
+      "source": "/social-growth/",
       "destination": "/?section=packages",
       "permanent": false
     },
@@ -22,12 +62,42 @@
       "permanent": false
     },
     {
+      "source": "/web-development",
+      "destination": "/book-a-call/index.html?interest=custom",
+      "permanent": false
+    },
+    {
+      "source": "/web-development/",
+      "destination": "/book-a-call/index.html?interest=custom",
+      "permanent": false
+    },
+    {
       "source": "/web-development/:path*",
       "destination": "/book-a-call/index.html?interest=custom",
       "permanent": false
     },
     {
+      "source": "/cart",
+      "destination": "/book-a-call/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/cart/",
+      "destination": "/book-a-call/index.html",
+      "permanent": false
+    },
+    {
       "source": "/cart/:path*",
+      "destination": "/book-a-call/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/checkout",
+      "destination": "/book-a-call/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/checkout/",
       "destination": "/book-a-call/index.html",
       "permanent": false
     },
@@ -37,8 +107,28 @@
       "permanent": false
     },
     {
+      "source": "/my-account",
+      "destination": "/book-a-call/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/my-account/",
+      "destination": "/book-a-call/index.html",
+      "permanent": false
+    },
+    {
       "source": "/my-account/:path*",
       "destination": "/book-a-call/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/?section=work",
+      "permanent": false
+    },
+    {
+      "source": "/case-studies/",
+      "destination": "/?section=work",
       "permanent": false
     },
     {
@@ -47,12 +137,42 @@
       "permanent": false
     },
     {
+      "source": "/partners",
+      "destination": "/partner/",
+      "permanent": false
+    },
+    {
+      "source": "/partners/",
+      "destination": "/partner/",
+      "permanent": false
+    },
+    {
       "source": "/partners/:path*",
       "destination": "/partner/",
       "permanent": false
     },
     {
+      "source": "/home",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
       "source": "/home/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/feed/",
       "destination": "/",
       "permanent": false
     },

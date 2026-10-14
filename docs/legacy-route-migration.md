@@ -4,7 +4,7 @@ The repository retains the original static archive, but the current marketing si
 
 ## Routing
 
-`vercel.json` applies temporary (307) redirects before the legacy files are served. These redirects can be changed in a later deployment without leaving a permanently cached route on visitors' devices.
+`vercel.json` applies temporary (307) redirects before the legacy files are served. Each entry point has explicit rules for the bare path, trailing-slash directory root, and wildcard subpaths. These redirects can be changed in a later deployment without leaving a permanently cached route on visitors' devices.
 
 | Legacy entry point | Current destination |
 |---|---|
