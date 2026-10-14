@@ -2,6 +2,16 @@
 
 Prepared October 14, 2026. Audience confirmed by Ivan: business owners and personal brands.
 
+## Second improvement release
+
+- Mobile navigation with native keyboard controls, Escape handling, and close-on-navigation.
+- A goal-based package finder and a side-by-side scope comparison.
+- Separate service/media budgets, an optional profile URL, whitespace validation, automatic stale-brief invalidation, and downloadable consultation notes.
+- A local sales pipeline with owner/next action/follow-up requirements, overdue flags in America/New_York, paid-client counts, initial payments, edit/archive/restore, and validated JSON backups.
+- Reviewed acquisition-test drafts in `acquisition-plan.md`. No outreach has been sent.
+
+The pipeline and workbench are local deliverables. They are not added to the public website repository, and no client records have been populated. Browser event hooks contain only event names and offer IDs; they do not install or send analytics.
+
 ## What is ready
 
 - A responsive replacement homepage with concrete service descriptions, a process, package fit, FAQs, and consultation links.
@@ -162,7 +172,7 @@ Measure funnel rates by a consistent lead cohort. Define conversion events befor
 
 ## Deployment handoff
 
-The supplied GitHub repository is a static WordPress archive; it does not contain the source of the different live “Architectural Intelligence” version observed during the review. No hosting configuration was found in the repository.
+The supplied GitHub repository is a static WordPress archive; it does not contain the source of the different live “Architectural Intelligence” version observed during the review. No hosting configuration was found in the repository. The GitHub integration did successfully deploy this PR to a Vercel preview at https://kolossmedia-com-git-codex-koloss-g-a13daf-bagzbagz123s-projects.vercel.app/; this preview was inspected in the browser. The Vercel connector still lacks access to project configuration, so production-domain mapping remains unconfirmed.
 
 The implementation branch replaces the archived homepage and consultation page with static HTML, CSS, and JavaScript. A `/home/` redirect points to the new homepage. Other archived paths remain in the repository for compatibility and have not been rewritten in this release. Their old prices, guarantees, and cart/checkout pages require a separate retirement or migration decision. They are not linked in the replacement homepage.
 
