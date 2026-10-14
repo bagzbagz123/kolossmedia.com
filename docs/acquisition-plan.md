@@ -74,6 +74,8 @@ Continue a channel when the leads fit, collected revenue supports the costs, and
 
 ## Measurement hooks in the website
 
-The website emits browser events named `koloss:conversion` for consultation clicks, package-finder use, brief preparation, and calendar opens. Their detail contains only an event name and offer ID. No visitor goal, budget, URL, or free-text response is included.
+The website emits browser events named `koloss:conversion` for consultation clicks, package-finder use, brief preparation, calendar opens, and email draft opens. Their detail contains only an event name and offer ID. No visitor goal, budget, URL, or free-text response is included.
 
 These hooks do not install analytics, send data, or create a report. An approved analytics implementation can listen to them later. A calendar open is not a completed booking; booking confirmation needs a verified calendar integration or a reconciliation of actual calendar records.
+
+Campaign links and a visitor-correctable source answer are now supported. See [inquiry measurement](inquiry-measurement.md) for supported tags, the email-draft path, and the weekly reconciliation process.
