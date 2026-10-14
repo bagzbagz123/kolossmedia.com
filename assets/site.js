@@ -1,6 +1,32 @@
 'use strict';
 document.querySelectorAll('[data-year]').forEach(el => { el.textContent = String(new Date().getFullYear()); });
 
+// Campaign context stays in this page and its internal links; no storage or transmission.
+const campaignSources = {
+  instagram: 'Instagram', linkedin: 'LinkedIn', youtube: 'YouTube',
+  google: 'Google', email: 'Email', referral: 'Client / partner referral', outreach: 'Direct outreach'
+};
+const campaignMedia = ['organic', 'social', 'paid_social', 'cpc', 'email', 'referral', 'outbound'];
+const campaignQuery = new URLSearchParams(window.location.search);
+const campaignContext = {};
+if (Object.hasOwn(campaignSources, campaignQuery.get('utm_source'))) {
+  campaignContext.utm_source = campaignQuery.get('utm_source');
+  const medium = campaignQuery.get('utm_medium');
+  const campaign = campaignQuery.get('utm_campaign');
+  if (campaignMedia.includes(medium)) campaignContext.utm_medium = medium;
+  if (campaign && /^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(campaign) && campaign.length <= 64) campaignContext.utm_campaign = campaign;
+}
+function withCampaign(href) {
+  const url = new URL(href, window.location.href);
+  if (url.origin !== window.location.origin) return href;
+  Object.entries(campaignContext).forEach(([key, value]) => url.searchParams.set(key, value));
+  return url.href;
+}
+document.querySelectorAll('a[href]').forEach(link => {
+  const url = new URL(link.href, window.location.href);
+  if (url.origin === window.location.origin && !link.getAttribute('href').startsWith('#')) link.href = withCampaign(link.href);
+});
+
 // Event hooks carry only event names and offer IDs. No form answers are included.
 function conversion(event, interest = 'unsure') {
   document.dispatchEvent(new CustomEvent('koloss:conversion', { detail: { event, interest } }));
@@ -42,7 +68,7 @@ if (finder) {
     if (!recommendation) return;
     document.querySelector('#recommendation-heading').textContent = recommendation.title;
     document.querySelector('#recommendation-description').textContent = recommendation.description;
-    document.querySelector('#recommendation-link').href = `book-a-call/index.html?interest=${recommendation.interest}`;
+    document.querySelector('#recommendation-link').href = withCampaign(`book-a-call/index.html?interest=${recommendation.interest}`);
     document.querySelector('#recommendation').hidden = false;
     document.querySelector('#recommendation-heading').focus();
     conversion('package_finder_used', recommendation.interest);
@@ -56,6 +82,7 @@ if (form) {
   const summary = document.querySelector('#brief-summary');
   const brief = document.querySelector('#brief');
   const goal = form.elements.goal;
+  if (campaignContext.utm_source) form.elements.discovery.value = campaignContext.utm_source;
   form.addEventListener('input', () => {
     goal.setCustomValidity('');
     brief.hidden = true;
@@ -68,14 +95,22 @@ if (form) {
     if (!form.reportValidity()) return;
     const text = name => form.elements[name].selectedOptions[0].textContent;
     const lines = ['KOLOSS MEDIA — CONSULTATION BRIEF', `I’m a: ${text('audience')}`];
+    if (form.elements.discovery.value) lines.push(`How I heard about Koloss Media: ${text('discovery')}`);
+    if (campaignContext.utm_source) {
+      lines.push(`Link source: ${campaignContext.utm_source}`);
+      if (campaignContext.utm_medium) lines.push(`Link medium: ${campaignContext.utm_medium}`);
+      if (campaignContext.utm_campaign) lines.push(`Campaign: ${campaignContext.utm_campaign}`);
+    }
     if (form.elements.profile.value.trim()) lines.push(`Website / profile: ${form.elements.profile.value.trim()}`);
     lines.push(`Interested in: ${text('interest')}`, `Monthly service budget: ${text('budget')}`, `Separate advertising budget: ${text('media')}`, `Timing: ${text('timing')}`, `My goal: ${goal.value.trim()}`);
     summary.textContent = lines.join('\n');
+    document.querySelector('#email-brief').href = `mailto:contact@kolossmedia.com?subject=${encodeURIComponent('Koloss Media consultation inquiry')}&body=${encodeURIComponent(summary.textContent)}`;
     document.querySelector('#copy-status').textContent = '';
     brief.hidden = false;
     document.querySelector('#brief-heading').focus();
     conversion('consultation_brief_prepared', form.elements.interest.value);
   });
+  document.querySelector('#email-brief').addEventListener('click', () => conversion('email_draft_opened', form.elements.interest.value));
   document.querySelector('#copy-brief').addEventListener('click', async () => {
     const status = document.querySelector('#copy-status');
     try { await navigator.clipboard.writeText(summary.textContent); status.textContent = 'Copied. You can paste this into your booking notes.'; }
