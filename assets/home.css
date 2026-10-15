@@ -7,6 +7,8 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @media(prefers-contrast:more){:root{--muted:var(--ink);--line:var(--muted)}.button-outline{border-color:var(--ink)}}
 @media(forced-colors:active){.button{border:1px solid ButtonText}.package{border:1px solid CanvasText}}
-
-/* Original gold wordmark from the Koloss Media brand archive. */
-.brand.brand-wordmark img{width:158px;height:auto;border-radius:0;object-fit:contain}.footer .brand.brand-wordmark img{width:145px}
+/* Supplied logo from Desktop/kolossmedia.com-main/logos; transparent padding stays in the source image. */
+.brand.brand-file{position:relative;display:block;width:112px;height:76px;min-height:76px;flex-shrink:0;overflow:hidden}
+.brand.brand-file img{position:absolute;left:-20px;top:-42px;width:152px;height:152px;max-width:none;border-radius:0;object-fit:contain}
+.header .brand-file{margin-block:12px}
+@media(prefers-color-scheme:dark){.brand.brand-file img{filter:invert(1)}}
