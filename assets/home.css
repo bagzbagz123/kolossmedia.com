@@ -7,3 +7,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @media(prefers-contrast:more){:root{--muted:var(--ink);--line:var(--muted)}.button-outline{border-color:var(--ink)}}
 @media(forced-colors:active){.button{border:1px solid ButtonText}.package{border:1px solid CanvasText}}
+
+/* Original gold wordmark from the Koloss Media brand archive. */
+.brand.brand-wordmark img{width:158px;height:auto;border-radius:0;object-fit:contain}.footer .brand.brand-wordmark img{width:145px}
