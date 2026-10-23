@@ -49,11 +49,12 @@ h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}h1{font-size:clamp(2.75rem,5.9vw,5
   .hero-story[data-pin="true"] .hero{height:100%;padding-block:24px;display:flex;flex-direction:column;justify-content:center;min-width:0}
   .hero-story[data-pin="true"] .hero-grid{transform:none;opacity:1}
   .hero-story[data-pin="true"] .hero-grid,.hero-story[data-pin="true"] .hero>.eyebrow{flex:none}
-  .hero-story[data-pin="true"] h1{width:fit-content;max-width:100%;text-align:left;transform:translate3d(var(--story-x,0px),var(--story-y,0px),0) scale(var(--story-scale,1));transform-origin:0 0}
-  .hero-story[data-pin="true"] .title-line{overflow:hidden}
+  .hero-story[data-pin="true"] h1{width:fit-content;max-width:100%;text-align:left;opacity:calc(1 - var(--story-heading-out,0));transform:translate3d(var(--story-x,0px),var(--story-y,0px),0) scale(var(--story-scale,1));transform-origin:0 0}
+  .hero-story[data-pin="true"] .title-line{--line-progress:var(--story-swap,0)}
+  .hero-story[data-pin="true"] .title-line+.title-line{--line-progress:var(--story-swap-second,var(--story-swap,0))}
   .hero-story[data-pin="true"] .title-line>span{display:block}
-  .hero-story[data-pin="true"] h1 .title-line>span{transform:translate3d(0,calc(var(--story-swap,0)*-105%),0)}
-  .hero-story[data-pin="true"] h2 .title-line>span{transform:translate3d(0,calc((1 - var(--story-swap,0))*105%),0)}
+  .hero-story[data-pin="true"] h1 .title-line>span{transform:translate3d(0,calc(var(--story-heading-out,0)*-12px),0)}
+  .hero-story[data-pin="true"] h2 .title-line>span{opacity:var(--line-progress,0);transform:translate3d(0,calc((1 - var(--line-progress,0))*18px),0)}
   .hero-story[data-pin="true"] .hero-copy{opacity:calc(1 - var(--story-copy-out,0));transform:translate3d(0,calc(var(--story-copy-out,0)*-18px),0)}
   .hero-story[data-pin="true"] .hero>.eyebrow{opacity:calc(1 - var(--story-copy-out,0));transform:translate3d(0,calc(var(--story-copy-out,0)*-14px),0)}
   .hero-story[data-pin="true"][data-scene="opening"] .hero .actions{pointer-events:auto}

@@ -138,8 +138,10 @@
     progress.style.transform = `scaleX(${amount})`;
     const heroAmount = hero && !reduced ? Math.min(1, Math.max(0, (window.scrollY - heroStart) / heroHeight)) : 0;
     if (hero) hero.style.setProperty('--hero-progress', heroAmount.toFixed(4));
-    const startY = window.innerHeight * 0.94;
-    const finishY = window.innerHeight * (window.innerWidth <= 760 ? 0.69 : 0.64);
+    // A wider reading-area span keeps the same travel from rushing past on one gesture.
+    const mobile = window.innerWidth <= 760;
+    const startY = window.innerHeight * (mobile ? 0.96 : 0.97);
+    const finishY = window.innerHeight * (mobile ? 0.55 : 0.50);
     const span = startY - finishY;
     flow.forEach(item => {
       // End-of-page groups finish at the document bottom, even on a tall screen.

@@ -46,7 +46,7 @@
       return;
     }
     const mobile = window.innerWidth <= 760;
-    distance = Math.round(Math.min(560, Math.max(220, height * (mobile ? 0.44 : 0.58))));
+    distance = Math.round(Math.min(860, Math.max(320, height * (mobile ? 0.70 : 0.86))));
     owner.style.setProperty('--story-top', `${top}px`);
     owner.style.setProperty('--story-height', `${height}px`);
     owner.style.setProperty('--story-distance', `${distance}px`);
@@ -66,18 +66,23 @@
     if (measureNeeded) { measure(); measureNeeded = false; }
     if (!enabled) return;
     const p = clamp((window.scrollY - start) / distance);
-    const travel = ease(p, 0.02, 0.46);
-    const copyOut = ease(p, 0, 0.19);
-    const swap = ease(p, 0.4, 0.74);
+    // Use the full scene for movement rather than a quick change followed by a hold.
+    const travel = ease(p, 0.02, 0.57);
+    const copyOut = ease(p, 0.02, 0.32);
+    const headingOut = ease(p, 0.36, 0.60);
+    const swap = ease(p, 0.60, 0.96);
+    const secondLine = ease(p, 0.64, 1);
     story.dataset.progress = p.toFixed(4);
-    story.dataset.scene = p < 0.19 ? 'opening' : 'services';
+    story.dataset.scene = p < 0.32 ? 'opening' : 'services';
     story.style.setProperty('--story-x', `${(dx * travel).toFixed(2)}px`);
     story.style.setProperty('--story-y', `${(dy * travel).toFixed(2)}px`);
     story.style.setProperty('--story-scale', (1 + (scale - 1) * travel).toFixed(4));
     story.style.setProperty('--story-swap', swap.toFixed(4));
+    story.style.setProperty('--story-swap-second', secondLine.toFixed(4));
+    story.style.setProperty('--story-heading-out', headingOut.toFixed(4));
     story.style.setProperty('--story-copy-out', copyOut.toFixed(4));
-    story.style.setProperty('--story-label', ease(p, 0.24, 0.46).toFixed(4));
-    story.style.setProperty('--story-detail', ease(p, 0.28, 0.62).toFixed(4));
+    story.style.setProperty('--story-label', ease(p, 0.25, 0.55).toFixed(4));
+    story.style.setProperty('--story-detail', ease(p, 0.27, 0.72).toFixed(4));
   }
   function schedule() {
     if (scheduled) return;
