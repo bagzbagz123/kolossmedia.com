@@ -41,6 +41,9 @@
     if (!enabled) {
       story.dataset.progress = '0.0000';
       story.dataset.scene = 'opening';
+      story.dataset.servicesReady = 'true';
+      services.style.setProperty('--story-service-lift', '0px');
+      services.style.setProperty('--story-services-opacity', '1');
       const offset = position(services).top - position(nextTitle).top + top + 24 - padding;
       owner.style.setProperty('--story-anchor-offset', `${Math.max(0, offset)}px`);
       return;
@@ -69,9 +72,18 @@
     // Use the full scene for movement rather than a quick change followed by a hold.
     const travel = ease(p, 0.02, 0.57);
     const copyOut = ease(p, 0.02, 0.32);
-    const headingOut = ease(p, 0.36, 0.60);
-    const swap = ease(p, 0.60, 0.96);
-    const secondLine = ease(p, 0.64, 1);
+    const headingOut = ease(p, 0.24, 0.46);
+    const swap = ease(p, 0.46, 0.90);
+    const secondLine = ease(p, 0.50, 0.98);
+    // Bring the list into the scene without shortening the headline's slow handoff.
+    // Its gap stays bounded; the curve never reverses and joins native flow smoothly.
+    const remaining = distance * (1 - p);
+    const gapLimit = window.innerWidth <= 760 ? 64 : 100;
+    const gap = remaining * gapLimit / (remaining + gapLimit);
+    const listOpacity = ease(p, 0.28, 0.52);
+    services.style.setProperty('--story-service-lift', `${(remaining - gap).toFixed(2)}px`);
+    services.style.setProperty('--story-services-opacity', listOpacity.toFixed(4));
+    story.dataset.servicesReady = String(listOpacity >= 0.1);
     story.dataset.progress = p.toFixed(4);
     story.dataset.scene = p < 0.32 ? 'opening' : 'services';
     story.style.setProperty('--story-x', `${(dx * travel).toFixed(2)}px`);
@@ -95,6 +107,14 @@
   stage.addEventListener('focusin', () => { story.dataset.heroFocus = 'true'; });
   stage.addEventListener('focusout', event => {
     if (!stage.contains(event.relatedTarget)) story.dataset.heroFocus = 'false';
+  });
+  // Tabbing into the early preview reveals the complete services section immediately.
+  // Pointer focus keeps the link in place through its click.
+  services.addEventListener('focusin', event => {
+    if (enabled && window.scrollY < start + distance && event.target.matches?.(':focus-visible')) {
+      services.scrollIntoView({behavior: 'instant'});
+      update();
+    }
   });
   const change = event => { reduced = event.matches; measureNeeded = true; update(); };
   if (preference.addEventListener) preference.addEventListener('change', change);
