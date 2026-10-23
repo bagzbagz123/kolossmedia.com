@@ -11,7 +11,7 @@
   // On the homepage, complete content groups share the opening's scroll-driven pacing.
   // Offset geometry ignores transforms and is read only when the layout changes.
   const flow = document.querySelector('.hero-story') ? [...document.querySelectorAll([
-    '.approach-layout > div:first-child',
+    '#services .service-row:not(:first-child)', '.approach-layout > div:first-child',
     '.steps li', '.faq-section > div:first-child', '.faq', '.closing > *', '.footer > *'
   ].join(','))].map(target => {
     const headline = target.matches('.approach-layout > div:first-child, .faq-section > div:first-child, .closing > div:first-child');
@@ -31,8 +31,8 @@
     '.booking-intro > div', '.calendar-panel', '.booking-after > div',
     '.booking-layout > section', '.footer > *'
   ].join(',');
-  // The service list joins the pinned scene as one group, without nested entrances.
-  const targets = [...document.querySelectorAll(selector)].filter(target => !target.closest('.hero-story') && !target.closest('#services') && !target.closest('[data-flow]'));
+  // The first service joins the pinned scene directly, without a second timed entrance.
+  const targets = [...document.querySelectorAll(selector)].filter(target => !target.closest('.hero-story') && !target.closest('#services .service-row:first-child') && !target.closest('[data-flow]'));
   const groupOrder = new WeakMap();
   targets.forEach(target => {
     const order = groupOrder.get(target.parentElement) || 0;

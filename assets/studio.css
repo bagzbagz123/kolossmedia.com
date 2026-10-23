@@ -63,9 +63,6 @@ h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}h1{font-size:clamp(2.75rem,5.9vw,5
   .hero-story[data-pin="true"] .hero-services .eyebrow{opacity:var(--story-label,0)}
   .hero-story[data-pin="true"] .hero-services .section-intro>p{opacity:var(--story-detail,0);transform:translate3d(0,calc((1 - var(--story-detail,0))*18px),0)}
   .hero-story[data-pin="true"]+#services{position:relative;z-index:1;margin-top:calc(-1*var(--story-overlap))}
-  .hero-story[data-pin="true"]+#services .service-list{transform:translate3d(0,calc(-1*var(--story-service-lift,0px)),0);opacity:var(--story-services-opacity,1);pointer-events:none}
-  .hero-story[data-pin="true"][data-services-ready="true"]+#services .service-list,.hero-story[data-pin="true"]+#services .service-list:focus-within{pointer-events:auto}
-  .hero-story[data-pin="true"]+#services .service-list:focus-within{opacity:1}
   .hero-story[data-pin="true"][data-hero-focus="true"]+#services{opacity:0;pointer-events:none}
   .hero-story[data-pin="true"] .hero-stage:focus-within .hero h1,.hero-story[data-pin="true"] .hero-stage:focus-within .hero-copy,.hero-story[data-pin="true"] .hero-stage:focus-within .hero>.eyebrow{transform:none;opacity:1;clip-path:none}
   .hero-story[data-pin="true"] .hero-stage:focus-within .hero h1 .title-line>span{transform:none}
