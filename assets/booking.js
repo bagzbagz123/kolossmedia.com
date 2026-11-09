@@ -19,12 +19,31 @@
   Object.entries(context).forEach(([key,value]) => calendarURL.searchParams.set(key,value));
   document.querySelectorAll('[data-calendar]').forEach(link => {link.href=calendarURL.href;link.addEventListener('click',()=>conversion('calendar_opened'));});
   const status=document.getElementById('calendar-status');
-  function unavailable(){status.hidden=false;status.textContent='The calendar is taking a little longer. Open it using the link below, or email us.';}
-  // Official Cal.com queue bootstrap. No API key or additional booking backend is needed.
-  (function(C,A,L){let p=function(a,ar){a.q.push(ar)};let d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal;let ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];let s=d.createElement('script');s.src=A;s.onerror=unavailable;d.head.appendChild(s);cal.loaded=true;}if(ar[0]===L){const api=function(){p(api,arguments)};const namespace=ar[1];api.q=api.q||[];if(typeof namespace==='string'){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,['initNamespace',namespace]);}else p(cal,ar);return;}p(cal,ar);};})(window,'https://app.cal.com/embed/embed.js','init');
-  Cal('init',{origin:'https://cal.com'});
+  const calendar=document.getElementById('cal-inline');
+  const panel=document.getElementById('calendar-panel') || document.querySelector('.calendar-panel');
   let ready=false,confirmed=false;
-  Cal('on',{action:'linkReady',callback:()=>{ready=true;status.hidden=true;}});
+  function calendarState(state,message){
+    const busy=String(state==='loading');
+    calendar.setAttribute('aria-busy',busy);
+    panel.setAttribute('aria-busy',busy);
+    panel.dataset.calendarState=state;
+    status.hidden=false;
+    status.textContent=message;
+  }
+  function unavailable(failed=false){
+    if(ready)return;
+    calendarState('unavailable',failed
+      ? 'The calendar could not load. Use “Open the calendar” or ask by email.'
+      : 'The calendar is taking longer than expected. Use “Open the calendar” or ask by email.');
+  }
+  calendarState('loading','Loading available times… You can also open the calendar directly or ask by email.');
+  // Official Cal.com queue bootstrap. No API key or additional booking backend is needed.
+  (function(C,A,L){let p=function(a,ar){a.q.push(ar)};let d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal;let ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];let s=d.createElement('script');s.src=A;s.onerror=()=>unavailable(true);d.head.appendChild(s);cal.loaded=true;}if(ar[0]===L){const api=function(){p(api,arguments)};const namespace=ar[1];api.q=api.q||[];if(typeof namespace==='string'){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,['initNamespace',namespace]);}else p(cal,ar);return;}p(cal,ar);};})(window,'https://app.cal.com/embed/embed.js','init');
+  Cal('init',{origin:'https://cal.com'});
+  Cal('on',{action:'linkReady',callback:()=>{
+    ready=true;
+    calendarState('ready','Calendar ready. Select a date and time.');
+  }});
   Cal('on',{action:'bookingSuccessfulV2',callback:()=>{
     if(confirmed)return;
     confirmed=true;

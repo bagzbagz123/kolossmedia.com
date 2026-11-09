@@ -17,33 +17,22 @@
   const clamp = value => Math.max(0, Math.min(1, value));
   const ease = value => 1 - Math.pow(1 - clamp(value), 3);
   const selector = [
-    '.hero h1 .title-line > span', '.hero .actions > a',
-    '.hero-services .eyebrow', '.hero-services h2 .title-line > span', '.hero-services .section-intro > p',
-    '.service-row h3', '.service-row p', '.service-row a',
-    '.approach-layout h2', '.approach-layout > div > p',
-    '.steps li > span', '.steps h3', '.steps p',
-    '.faq-section h2', '.faq summary',
-    '.closing h2', '.closing p', '.closing a', '.footer p'
+    '.hero h1 .title-line > span', '.hero-evidence .archive-crop',
+    '.hero-services h2 .title-line > span', '.service-row h3',
+    '.approach-layout h2', '.faq-section h2', '.closing h2'
   ].join(',');
   const tasks = Array.from(document.querySelectorAll(selector), (source, index) => ({
     source, color: colors[index % colors.length], lines: [], top: 0, begin: 0, end: 1,
-    textLength: Math.max(1, source.textContent.trim().length), progress: 1, settled: false,
-    mask: !source.matches('a, button, summary') && !source.closest('.hero') && !source.querySelector('a, button, input, select, textarea, summary'),
+    progress: 1, settled: false, text: !source.matches('.archive-crop'),
     hero: !!source.closest('.hero'), intro: !!source.closest('.hero-services'),
-    clip: source.style.getPropertyValue('clip-path'), priority: source.style.getPropertyPriority('clip-path'),
     group: source.closest('.service-row, .steps li, .faq-section, .closing, .hero-services, .approach-layout > div'),
-    box: null, pen: {x: 0, y: 0}, lastClip: ''
+    box: null, pen: {x: 0, y: 0}
   }));
   let width = 0, height = 0, maximum = 0, frame = 0, layoutFrame = 0;
   let lastScroll = window.scrollY;
   let disabled = preference.matches || contrast.matches;
 
   function restore(task) {
-    if (task.lastClip) {
-      if (task.clip) task.source.style.setProperty('clip-path', task.clip, task.priority);
-      else task.source.style.removeProperty('clip-path');
-      task.lastClip = '';
-    }
     task.source.dataset.swarmProgress = '1.0000';
   }
 
@@ -142,32 +131,6 @@
 
   function reveal(task, progress) {
     task.source.dataset.swarmProgress = progress.toFixed(4);
-    if (!task.mask || task.settled || progress >= 1) { restore(task); return; }
-    const amount = Math.floor(clamp((progress - 0.10) / 0.80) * task.textLength) / task.textLength;
-    let clip;
-    if (amount >= 1) {
-      restore(task);
-      return;
-    }
-    if (!task.lines.length || amount <= 0) {
-      clip = 'inset(0 100% 0 0)';
-    } else {
-      let remaining = task.lineWidth * amount;
-      let active = task.lines[0];
-      for (const line of task.lines) {
-        active = line;
-        if (remaining <= line.right - line.x) break;
-        remaining -= line.right - line.x;
-      }
-      const right = (active.x + Math.max(0, remaining)) * 100;
-      const top = Math.max(0, active.y * 100 - 0.5);
-      const bottom = Math.min(100, active.bottom * 100 + 0.5);
-      clip = `polygon(0 0,100% 0,100% ${top}%,${right}% ${top}%,${right}% ${bottom}%,0 ${bottom}%)`;
-    }
-    if (task.lastClip !== clip) {
-      task.source.style.setProperty('clip-path', clip);
-      task.lastClip = clip;
-    }
   }
 
   function cursor(x, y, color, mode, alpha, dx, dy) {
@@ -208,23 +171,16 @@
     const x = box.left - 5, y = box.top - 4, w = box.width + 10, h = box.height + 8;
     const trace = ease(p / 0.28);
     ctx.save();
-    ctx.strokeStyle = '#719cff';
-    ctx.fillStyle = '#719cff';
-    ctx.globalAlpha = alpha * 0.65;
+    ctx.strokeStyle = task.color;
+    ctx.fillStyle = task.color;
+    ctx.globalAlpha = alpha * 0.38;
     ctx.lineWidth = 1;
     ctx.setLineDash([3, 3]);
     ctx.strokeRect(x, y, w * trace, h * trace);
     ctx.setLineDash([]);
     if (trace > 0.98) {
       for (const px of [x, x + w]) for (const py of [y, y + h]) ctx.fillRect(px - 2, py - 2, 4, 4);
-      if (task.source.matches('h2, h3, .title-line > span')) {
-        const label = `${Math.round(box.width)} × ${Math.round(box.height)}`;
-        ctx.font = '10px ui-monospace, monospace';
-        const labelWidth = ctx.measureText(label).width + 12;
-        ctx.fillRect(x + w - labelWidth, y + h + 5, labelWidth, 18);
-        ctx.fillStyle = '#0b0b0d';
-        ctx.fillText(label, x + w - labelWidth + 6, y + h + 17);
-      }
+
     }
     ctx.restore();
     const amount = clamp((p - 0.10) / 0.80);
@@ -236,7 +192,7 @@
     const penY = p < 0.22 ? y + h * trace : pen.y;
     const cx = fromX + (penX - fromX) * travel;
     const cy = fromY + (penY - fromY) * travel;
-    cursor(cx, cy, task.color, p < 0.22 ? 'crosshair' : task.mask ? 'text' : 'arrow', alpha, 5 + index % 3, 2);
+    cursor(cx, cy, task.color, p < 0.22 ? 'crosshair' : task.text ? 'text' : 'arrow', alpha, 5 + index % 3, 2);
     const angle = p * Math.PI * 3 + index * 1.7;
     cursor(cx + Math.cos(angle) * 28, cy + Math.sin(angle) * 22 + 18, colors[(index + 2) % colors.length], 'arrow', alpha * 0.85, -4, 3);
   }
@@ -253,7 +209,12 @@
         task.box = task.source.getBoundingClientRect();
       }
       let count = 0;
-      const limit = width < 600 ? 7 : 12;
+      const limit = width < 600 ? 4 : 7;
+      ctx.save();
+      ctx.beginPath();
+      const headerHeight = document.querySelector('.header').offsetHeight;
+      ctx.rect(0, headerHeight + 4, width, height - headerHeight);
+      ctx.clip();
       for (let i = 0; i < tasks.length; i++) {
         const task = tasks[i], box = task.box;
         reveal(task, task.progress);
@@ -262,6 +223,7 @@
         draw(task, i);
         count++;
       }
+      ctx.restore();
       canvas.hidden = count === 0;
       canvas.dataset.activeCount = String(count);
       canvas.dataset.scrollY = String(y);

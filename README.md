@@ -6,9 +6,15 @@ Run `python3 -m http.server 8765 --bind 127.0.0.1` from the repository, then ope
 
 ## Cursor rebuild animation
 
-The homepage loads `assets/swarm.js` and `assets/swarm.css` after the existing scroll scripts. Colored cursors and selection outlines follow native scroll position while real page text reveals as it enters the reading area. Scrolling backward reverses the effect. There is no autoplay, playback toolbar, automatic tour, scroll interception, or separate copy of the page. Nothing advances while the visitor is stationary.
+The homepage loads `assets/swarm.js` and `assets/swarm.css` after the existing scroll scripts. Colored cursors and selection outlines follow native scroll position around display headings and production imagery. Scrolling backward reverses the effect; stationary pages remain still. Text remains fully readable throughout, and no marketing content uses timed entrances.
 
-The homepage stays usable throughout: navigation, consultation links, content links, and FAQ disclosures are the actual page elements. Interactive controls are never clipped. Clicking or focusing a content group settles its text immediately. Reduced-motion and forced-colors preferences disable the effect and clear all masks. Resizing, font changes, and disclosure changes refresh geometry; footer text completes at the document bottom. No dependencies or external animation services are required.
+Navigation, consultation links, content links, and FAQ disclosures remain native interactive elements. Reduced-motion and forced-colors preferences suppress the decorative cursor layer. Resizing, font changes, and disclosure changes refresh geometry. No dependencies or external animation services are required.
+
+## Design and assets
+
+The shared dark-and-gold design uses a self-hosted Manrope variable font, with its SIL Open Font License under `assets/fonts/`. The homepage and content page show clean CSS crops of the existing production collage, labelled as archive imagery. The 72 KB WebP preserves the original image; captions do not imply client results or named commissions. The optimized transparent wordmark is 7.4 KB. The original PNG files remain available.
+
+The calendar exposes loading, ready, slow-load, and failure states through visible status text and `aria-busy`. Direct calendar and email alternatives remain above the embed. The external event's title, host identity, availability, and booking configuration are managed in Cal.com.
 
 The homepage and consultation page have been replaced with a focused marketing site for business owners and personal brands. `/home/` redirects to the root homepage. Other files are retained from the WordPress archive and are not rewritten in this release.
 
