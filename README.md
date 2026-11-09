@@ -6,9 +6,9 @@ Run `python3 -m http.server 8765 --bind 127.0.0.1` from the repository, then ope
 
 ## Cursor rebuild animation
 
-The homepage loads `assets/swarm.js` and `assets/swarm.css` after the existing scroll animations. A short opening sequence uses colored cursors, selection outlines, text reveals, and image assembly to reconstruct the first viewport. The optional **Tour** control continues through services, approach, FAQ, and the closing section. Pause/resume, restart, 1×/2×/3× speed, and **Go live** are available during playback; **Replay animation** starts again from the top.
+The homepage loads `assets/swarm.js` and `assets/swarm.css` after the existing scroll scripts. Colored cursors and selection outlines follow native scroll position while real page text reveals as it enters the reading area. Scrolling backward reverses the effect. There is no autoplay, playback toolbar, automatic tour, scroll interception, or separate copy of the page. Nothing advances while the visitor is stationary.
 
-The effect uses a temporary visual overlay measured from the actual page. The real content, links, and existing scroll scene remain available. Scrolling, Escape, resizing, clicking the page, or moving keyboard focus outside the animation controls dismisses it. Reduced-motion and forced-colors preferences bypass playback. Section deep links and back/forward navigation bypass automatic playback as well. No dependencies, storage, or external animation services are required.
+The homepage stays usable throughout: navigation, consultation links, content links, and FAQ disclosures are the actual page elements. Interactive controls are never clipped. Clicking or focusing a content group settles its text immediately. Reduced-motion and forced-colors preferences disable the effect and clear all masks. Resizing, font changes, and disclosure changes refresh geometry; footer text completes at the document bottom. No dependencies or external animation services are required.
 
 The homepage and consultation page have been replaced with a focused marketing site for business owners and personal brands. `/home/` redirects to the root homepage. Other files are retained from the WordPress archive and are not rewritten in this release.
 
