@@ -34,7 +34,8 @@
   function measure() {
     const top = header.offsetHeight;
     const height = Math.max(0, window.innerHeight - top);
-    const contentHeight = grid.offsetHeight + eyebrow.offsetHeight + parseFloat(window.getComputedStyle(eyebrow).marginBottom) + 48;
+    const labelStyle = window.getComputedStyle(eyebrow);
+    const contentHeight = grid.offsetHeight + eyebrow.offsetHeight + parseFloat(labelStyle.marginTop) + parseFloat(labelStyle.marginBottom) + 48;
     enabled = !reduced && !!window.CSS?.supports('position', 'sticky') && height >= 360 && height >= contentHeight;
     story.dataset.pin = String(enabled);
     const padding = parseFloat(window.getComputedStyle(document.documentElement).scrollPaddingTop) || top;

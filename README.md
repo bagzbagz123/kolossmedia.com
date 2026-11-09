@@ -4,6 +4,18 @@ Static HTML, CSS, and JavaScript. No install or build step is required.
 
 Run `python3 -m http.server 8765 --bind 127.0.0.1` from the repository, then open `http://127.0.0.1:8765/`.
 
+## Cursor rebuild animation
+
+The homepage loads `assets/swarm.js` and `assets/swarm.css` after the existing scroll scripts. Colored cursors and selection outlines follow native scroll position around display headings and production imagery. Scrolling backward reverses the effect; stationary pages remain still. Text remains fully readable throughout, and no marketing content uses timed entrances.
+
+Navigation, consultation links, content links, and FAQ disclosures remain native interactive elements. Reduced-motion and forced-colors preferences suppress the decorative cursor layer. Resizing, font changes, and disclosure changes refresh geometry. No dependencies or external animation services are required.
+
+## Design and assets
+
+The shared dark-and-gold design uses a self-hosted Manrope variable font, with its SIL Open Font License under `assets/fonts/`. The homepage and content page show clean CSS crops of the existing production collage, labelled as archive imagery. The 72 KB WebP preserves the original image; captions do not imply client results or named commissions. The optimized transparent wordmark is 7.4 KB. The original PNG files remain available.
+
+The calendar exposes loading, ready, slow-load, and failure states through visible status text and `aria-busy`. Direct calendar and email alternatives remain above the embed. The external event's title, host identity, availability, and booking configuration are managed in Cal.com.
+
 The homepage and consultation page have been replaced with a focused marketing site for business owners and personal brands. `/home/` redirects to the root homepage. Other files are retained from the WordPress archive and are not rewritten in this release.
 
 See [the operating playbook](docs/business-improvements.md) for proposed package scope, pricing reconciliation, case-study evidence, and deployment handoff. Proposed scope requires owner approval before publication. The live site's $5,000 and $12,000 starting-price anchors are retained.

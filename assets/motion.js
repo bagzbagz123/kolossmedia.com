@@ -2,7 +2,6 @@
 (() => {
   const root = document.documentElement;
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const active = new Map();
   let reduced = preference.matches;
   root.dataset.motion = reduced ? 'reduced' : 'enabled';
 
@@ -20,66 +19,9 @@
     return {target, headline, control, top: 0, focused: target.contains(document.activeElement)};
   }) : [];
 
-  // Content starts visible. Unsupported browsers or a blocked script keep it readable.
-  const selector = [
-    '.hero > .eyebrow', '.hero h1', '.hero-copy',
-    '.page-hero .eyebrow', '.page-hero h1', '.page-hero .hero-description',
-    '.page-hero .actions', '.section-intro > *', '.service-row > div',
-    '.approach-layout > div:first-child',
-    '.steps li', '.content-intro article', '.scope-grid article',
-    '.faq-section > div:first-child', '.faq details', '.closing > *',
-    '.booking-intro > div', '.calendar-panel', '.booking-after > div',
-    '.booking-layout > section', '.footer > *'
-  ].join(',');
-  // The first service joins the pinned scene directly, without a second timed entrance.
-  const targets = [...document.querySelectorAll(selector)].filter(target => !target.closest('.hero-story') && !target.closest('#services .service-row:first-child') && !target.closest('[data-flow]'));
-  const groupOrder = new WeakMap();
-  targets.forEach(target => {
-    const order = groupOrder.get(target.parentElement) || 0;
-    target.dataset.revealOrder = String(Math.min(order, 2));
-    groupOrder.set(target.parentElement, order + 1);
-  });
-
-  function reveal(target) {
-    if (target.dataset.revealed) return;
-    target.dataset.revealed = 'true';
-    if (reduced || typeof target.animate !== 'function' || target.contains(document.activeElement)) return;
-    const headline = target.matches('h1, .section-intro > div, .approach-layout > div:first-child, .faq-section > div:first-child, .closing > div:first-child');
-    const compact = target.matches('.faq details, .footer > *, .booking-intro > div, .calendar-panel, .booking-after > div');
-    const distance = headline ? 64 : compact ? 24 : 48;
-    const animation = target.animate([
-      {opacity: 0, transform: `translate3d(0, ${distance}px, 0) scale(${headline ? 0.97 : 1})`},
-      {opacity: 1, transform: 'translate3d(0, 0, 0) scale(1)'}
-    ], {
-      duration: headline ? 1100 : compact ? 700 : 950,
-      delay: Number(target.dataset.revealOrder) * (compact ? 55 : 110),
-      easing: 'cubic-bezier(.22, .68, 0, 1)',
-      fill: 'backwards'
-    });
-    active.set(target, animation);
-    const clear = () => active.delete(target);
-    animation.onfinish = clear;
-    animation.oncancel = clear;
-  }
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        reveal(entry.target);
-        observer.unobserve(entry.target);
-      });
-    }, {rootMargin: '0px 0px -48px 0px', threshold: 0.05});
-    targets.forEach(target => observer.observe(target));
-  } else {
-    targets.forEach(target => { target.dataset.revealed = 'true'; });
-  }
-
-  // Keyboard users can act immediately, even during an entrance transition.
+  // Content stays readable at rest; movement is derived only from scroll position.
+  // A focused control settles immediately instead of moving under the keyboard.
   document.addEventListener('focusin', event => {
-    active.forEach((animation, target) => {
-      if (target.contains(event.target)) animation.cancel();
-    });
     flow.forEach(item => {
       if (!item.target.contains(event.target)) return;
       // A focused control stays settled for the rest of this visit.
@@ -91,7 +33,6 @@
   const onPreference = event => {
     reduced = event.matches;
     root.dataset.motion = reduced ? 'reduced' : 'enabled';
-    if (reduced) active.forEach(animation => animation.cancel());
     schedule();
   };
   if (preference.addEventListener) preference.addEventListener('change', onPreference);
@@ -115,7 +56,7 @@
     const rest = 1 - amount;
     item.target.style.setProperty('--flow-y', `${(rest * distance).toFixed(2)}px`);
     item.target.style.setProperty('--flow-scale', (1 - rest * (item.headline ? 0.02 : 0)).toFixed(4));
-    item.target.style.setProperty('--flow-opacity', (1 - rest * (item.control ? 0 : item.headline ? 0.4 : 0.25)).toFixed(4));
+    item.target.style.setProperty('--flow-opacity', '1');
     item.target.dataset.flowProgress = amount.toFixed(4);
   }
   function update() {
