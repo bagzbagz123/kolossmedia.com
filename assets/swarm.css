@@ -1,0 +1,307 @@
+.swarm-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  overflow: hidden;
+  contain: strict;
+  background: var(--bg, #0b0b0d);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 250ms ease-out;
+}
+
+.swarm-layer.is-leaving {
+  opacity: 0;
+}
+
+.swarm-canvas,
+.swarm-fragments {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.swarm-canvas {
+  z-index: 2;
+  display: block;
+}
+
+.swarm-fragments {
+  z-index: 1;
+}
+
+.swarm-fragment {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.swarm-content {
+  pointer-events: none;
+  user-select: none;
+}
+
+.swarm-controls {
+  position: fixed;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  left: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: calc(100% - 32px);
+  min-height: 58px;
+  padding: 6px;
+  border: 1px solid var(--line, #333337);
+  border-radius: 999px;
+  background: var(--panel, #151517);
+  color: var(--ink, #f5f5f7);
+  font: 500 12px/1.35 var(--font, sans-serif);
+  transform: translateX(-50%);
+}
+
+.swarm-identity {
+  display: flex;
+  align-items: center;
+  flex: none;
+  gap: 9px;
+  padding-left: 11px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.swarm-identity > svg {
+  display: block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--warm, #d5bc8a);
+}
+
+.swarm-status {
+  color: var(--ink, #f5f5f7);
+  white-space: nowrap;
+}
+
+.swarm-meter {
+  flex: none;
+  width: 60px;
+  height: 3px;
+  margin-right: 8px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--line, #333337);
+}
+
+.swarm-meter-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--warm, #d5bc8a);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.swarm-control,
+.swarm-finish,
+.swarm-replay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 150ms ease-out, color 150ms ease-out;
+}
+
+.swarm-control > svg,
+.swarm-finish > svg,
+.swarm-replay > svg {
+  display: block;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.swarm-control:hover {
+  background: #29292d;
+}
+
+.swarm-control[aria-pressed="true"] {
+  background: var(--warm, #d5bc8a);
+  color: #111114;
+}
+
+.swarm-control:active,
+.swarm-finish:active,
+.swarm-replay:active {
+  opacity: .78;
+}
+
+.swarm-control:focus-visible,
+.swarm-finish:focus-visible,
+.swarm-replay:focus-visible {
+  outline: 2px solid var(--warm, #d5bc8a);
+  outline-offset: 3px;
+}
+
+.swarm-control:disabled,
+.swarm-finish:disabled {
+  opacity: .45;
+  cursor: default;
+}
+
+.swarm-speed {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+}
+
+.swarm-control[data-swarm-action="tour"] {
+  padding-inline: 8px;
+}
+
+.swarm-finish {
+  gap: 8px;
+  padding-inline: 15px;
+  background: var(--warm, #d5bc8a);
+  color: #111114;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.swarm-finish:hover {
+  background: #e3cca4;
+}
+
+.swarm-replay {
+  position: fixed;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 45;
+  gap: 8px;
+  padding-inline: 15px;
+  border-color: var(--line, #333337);
+  background: var(--panel, #151517);
+  color: var(--ink, #f5f5f7);
+  font: 500 12px/1.35 var(--font, sans-serif);
+  white-space: nowrap;
+}
+
+.swarm-replay:hover {
+  background: #29292d;
+}
+
+.swarm-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.swarm-layer[hidden],
+.swarm-controls[hidden],
+.swarm-replay[hidden],
+.swarm-sr[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .swarm-status,
+  .swarm-meter {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .swarm-controls {
+    bottom: max(16px, env(safe-area-inset-bottom));
+    gap: 4px;
+    min-height: 54px;
+    padding: 4px;
+  }
+
+  .swarm-identity {
+    gap: 0;
+    padding-inline: 9px 5px;
+  }
+
+  .swarm-status,
+  .swarm-meter {
+    display: none;
+  }
+
+  .swarm-finish {
+    padding-inline: 12px;
+  }
+
+  .swarm-replay {
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 380px) {
+  .swarm-identity {
+    display: none;
+  }
+
+  .swarm-finish {
+    gap: 6px;
+    padding-inline: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swarm-layer,
+  .swarm-controls *,
+  .swarm-replay {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .swarm-layer,
+  .swarm-controls,
+  .swarm-replay {
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  .swarm-controls,
+  .swarm-control,
+  .swarm-finish,
+  .swarm-replay {
+    border-color: ButtonText;
+  }
+
+  .swarm-finish,
+  .swarm-control[aria-pressed="true"] {
+    background: Highlight;
+    color: HighlightText;
+  }
+
+  .swarm-meter-fill {
+    background: Highlight;
+  }
+}
